@@ -1,0 +1,1 @@
+const teamName = 'Team name...';
