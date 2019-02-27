@@ -1,13 +1,10 @@
 // Material Theming
-
-// Define theme variables before importing any MDC Web component styles
-// $mdc-theme-primary: midnightblue;
+@import "my-theme";
 
 // Import the styles for each MDC Web component
 @import "@material/typography/mdc-typography";
 @import "@material/button/mdc-button";
 
-@import "theme";
 
 // This sets all <h1>,...,<h6> elements with Material headline1,...,headline6 typography styles
 // Check out the MDC Web documentation for how to use MDC Typography Sass mixins:
