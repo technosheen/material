@@ -1,6 +1,11 @@
 dependencies:
   '@material/button': 0.43.0
+  '@material/card': 0.43.0
+  '@material/chips': 0.43.0
+  '@material/fab': 0.43.0
   '@material/ripple': 0.43.0
+  '@material/textfield': 0.43.1
+  '@material/top-app-bar': 0.43.0
   '@material/typography': 0.42.0
 devDependencies:
   babel-core: 6.26.3
@@ -35,6 +40,40 @@ packages:
     dev: false
     resolution:
       integrity: sha512-BQbU1se1RH2TcLxhvxEKCJVR0jtQVCmk1gjOJ1SmrVsRshTT5gSQE4WRSFiV/3YmXYU994/KVYMCs2aovLFE/A==
+  /@material/card/0.43.0:
+    dependencies:
+      '@material/elevation': 0.43.0
+      '@material/ripple': 0.43.0
+      '@material/rtl': 0.42.0
+      '@material/shape': 0.43.0
+      '@material/theme': 0.43.0
+    dev: false
+    resolution:
+      integrity: sha512-uy0d7gtRWI3d1RDbzWqKnhvDH5iFv8myjd+UJNFGy076ZPZA5re+/RSP01Hc9IX+bDAQzAIDoVWLcFdPD7DpLg==
+  /@material/checkbox/0.43.0:
+    dependencies:
+      '@material/animation': 0.41.0
+      '@material/base': 0.41.0
+      '@material/ripple': 0.43.0
+      '@material/rtl': 0.42.0
+      '@material/selection-control': 0.43.0
+      '@material/theme': 0.43.0
+    dev: false
+    resolution:
+      integrity: sha512-LDAD+35I53oMNTIDr8fcVfm9BukwtKnos7FD4axstowminSDRujl26g0uTyi9iLhnkR8Vl70Xl60L6kh+GBX1A==
+  /@material/chips/0.43.0:
+    dependencies:
+      '@material/animation': 0.41.0
+      '@material/base': 0.41.0
+      '@material/checkbox': 0.43.0
+      '@material/elevation': 0.43.0
+      '@material/ripple': 0.43.0
+      '@material/shape': 0.43.0
+      '@material/theme': 0.43.0
+      '@material/typography': 0.43.0
+    dev: false
+    resolution:
+      integrity: sha512-iweQCpAabEAx/M0NSmP8c0y+I7nAqB8IWJ9L+a7QGnpcG6Om7Huhr3LSi4+ZmfpM1fTAdC9XKbvRBoPM5NWjPg==
   /@material/elevation/0.43.0:
     dependencies:
       '@material/animation': 0.41.0
@@ -42,6 +81,47 @@ packages:
     dev: false
     resolution:
       integrity: sha512-/OM+7HVS26hCa+AU0dfD/cdEkj2ssYNYIWwmqUVVJUIhB4v/xRsfnCf0Z1KXGtXU+V3AhHp8T9q5LHDzrkOvnA==
+  /@material/fab/0.43.0:
+    dependencies:
+      '@material/animation': 0.41.0
+      '@material/elevation': 0.43.0
+      '@material/ripple': 0.43.0
+      '@material/rtl': 0.42.0
+      '@material/shape': 0.43.0
+      '@material/theme': 0.43.0
+      '@material/typography': 0.43.0
+    dev: false
+    resolution:
+      integrity: sha512-AGygFI1S8hjjUmk71y1DYj0wu94vjHA9DH54FdcBoPTxH/sIRSl/WCHgvSYz2ALqRV1oXA8NOpzuqKxeB0ZmSA==
+  /@material/floating-label/0.43.0:
+    dependencies:
+      '@material/animation': 0.41.0
+      '@material/base': 0.41.0
+      '@material/rtl': 0.42.0
+      '@material/theme': 0.43.0
+      '@material/typography': 0.43.0
+    dev: false
+    resolution:
+      integrity: sha512-Wb76MA3b6kkhgrIzDX8DOdFyzNwDrVEzH3fA6yOhQcOSLHnc358ofcAXgcr7/Db0zBuwhDi176QXBBET49uSgw==
+  /@material/line-ripple/0.43.0:
+    dependencies:
+      '@material/animation': 0.41.0
+      '@material/base': 0.41.0
+      '@material/theme': 0.43.0
+    dev: false
+    resolution:
+      integrity: sha512-sXZYW4Em5uLEnAuVsQCO+sVHsTg7J2TOTJ0+akwZFMmd2tmNicjarQdlGIE9iU7Wjm51NOoLAu6Mz+8kLg90bQ==
+  /@material/notched-outline/0.43.0:
+    dependencies:
+      '@material/animation': 0.41.0
+      '@material/base': 0.41.0
+      '@material/floating-label': 0.43.0
+      '@material/rtl': 0.42.0
+      '@material/shape': 0.43.0
+      '@material/theme': 0.43.0
+    dev: false
+    resolution:
+      integrity: sha512-C+/vUK9P1oHf/8eoIaKEWSHchRTFqHAExfyqkMrBW6T2zg3mIoGR2pWwX69bUuGkeqv7X7zo6RTtL5bLEStWJA==
   /@material/ripple/0.43.0:
     dependencies:
       '@material/animation': 0.41.0
@@ -54,14 +134,48 @@ packages:
     dev: false
     resolution:
       integrity: sha512-VrnrKJzhmspsN8WXHuxxBZ69yM5IwhCUqWr1t1eNfw3ZEvEj7i1g3P31HGowKThIN1dc1Wh4LE14rCISWCtv5w==
+  /@material/selection-control/0.43.0:
+    dependencies:
+      '@material/ripple': 0.43.0
+    dev: false
+    resolution:
+      integrity: sha512-8vFMposydO3uZ9mWprTF7lUn3qniwuzLpjd3fZiMM0kSIT9hZautZdQlPjN6pV5sVvhf/Qgx3FZNnTvLm0MReA==
   /@material/shape/0.43.0:
     dev: false
     resolution:
       integrity: sha512-KGnoQV4G2OQbMe5Lr5Xbk8XNlO93Qi/juxXtd2wrAfiaPmktD8ug0CwdVDOPBOmj9a0gX3Ofi9XWcoU+tLEVjg==
+  /@material/textfield/0.43.1:
+    dependencies:
+      '@material/animation': 0.41.0
+      '@material/base': 0.41.0
+      '@material/floating-label': 0.43.0
+      '@material/line-ripple': 0.43.0
+      '@material/notched-outline': 0.43.0
+      '@material/ripple': 0.43.0
+      '@material/rtl': 0.42.0
+      '@material/shape': 0.43.0
+      '@material/theme': 0.43.0
+      '@material/typography': 0.43.0
+    dev: false
+    resolution:
+      integrity: sha512-LKDcGrH7DJU9M7fAtSBcjssJ/FzgWgDBXbm2IitU0YbceVEtlnqHmHFcGNG1kXYjbG9znZyxyKHFRdVaBIK3fQ==
   /@material/theme/0.43.0:
     dev: false
     resolution:
       integrity: sha512-/zndZL6EihI18v2mYd4O8xvOBAAXmLeHyHVK28LozSAaJ9okQgD25wq5Ktk95oMTmPIC+rH66KcK6371ivNk8g==
+  /@material/top-app-bar/0.43.0:
+    dependencies:
+      '@material/animation': 0.41.0
+      '@material/base': 0.41.0
+      '@material/elevation': 0.43.0
+      '@material/ripple': 0.43.0
+      '@material/rtl': 0.42.0
+      '@material/shape': 0.43.0
+      '@material/theme': 0.43.0
+      '@material/typography': 0.43.0
+    dev: false
+    resolution:
+      integrity: sha512-/+/KTvIsuOqlNKtCXYghuTsNokXcICGLdtpQqvUa5fbOcYALIYjWexpXRwTq6SyTJIpoZOotB8Ytcl1l4FB2Dg==
   /@material/typography/0.42.0:
     dev: false
     resolution:
@@ -5469,7 +5583,12 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@material/button': ^0.43.0
+  '@material/card': ^0.43.0
+  '@material/chips': ^0.43.0
+  '@material/fab': ^0.43.0
   '@material/ripple': ^0.43.0
+  '@material/textfield': ^0.43.0
+  '@material/top-app-bar': ^0.43.0
   '@material/typography': ^0.42.0
   babel-core: ^6.26.3
   babel-loader: ^7.1.5
