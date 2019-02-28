@@ -1,17 +1,14 @@
 // Material Theming
+// Define theme variables before importing any MDC Web component styles
 @import "my-theme";
 
 // Import the styles for each MDC Web component
-@import "@material/typography/mdc-typography";
 @import "@material/button/mdc-button";
+@import "@material/textfield/mdc-text-field";
+@import "@material/typography/mdc-typography";
 
 
 .stickersheet-title {
   text-transform: uppercase;
   font-family: 'Roboto mono';
-}
-
-// This sets all <p> elements with Material body1 typography styles
-p {
-  @include mdc-typography(body1);
 }
