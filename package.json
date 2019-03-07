@@ -25,8 +25,9 @@
     "@material/button": "^0.43.0",
     "@material/card": "^0.43.0",
     "@material/chips": "^0.43.0",
+    "@material/drawer": "^0.43.0",
     "@material/fab": "^0.43.0",
-    "@material/ripple": "^0.43.0",
+    "@material/ripple": "^1.0.0",
     "@material/textfield": "^0.43.0",
     "@material/top-app-bar": "^0.43.0",
     "@material/typography": "^0.42.0"

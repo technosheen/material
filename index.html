@@ -11,54 +11,103 @@
   </head>
   <body class="mdc-typography">
     <!-- Apply Material headline3 style to this <h1> element -->
-    <h1 class="stickersheet-title mdc-typography--headline5">Material Stickersheet</h1>
-    <input class="team-name mdc-typography--headline4" placeholder="Enter team name..." >
     
-    <!-- Button -->
-    <section>
-      <button class="mdc-button mdc-button--raised">
-        Button
-      </button>
-      <button class="mdc-button">
-        Button
-      </button>
-    </section>
+    <aside class="mdc-drawer">
+      <div class="mdc-drawer__content">
+        <h1 class="stickersheet-title mdc-typography--headline5">Material Theme Builder</h1>
+        <h2 contenteditable class="team-name mdc-typography--headline6">Enter team name...</h2>
+        <p class="glitch-url"></p>
+      </div>
+    </aside>
     
-    <!-- Text field -->
-    <section>
-      <div class="mdc-text-field mdc-text-field--outlined">
-        <input type="text" id="tf-outlined" class="mdc-text-field__input">
-        <div class="mdc-notched-outline">
-          <div class="mdc-notched-outline__leading"></div>
-          <div class="mdc-notched-outline__notch">
-            <label for="tf-outlined" class="mdc-floating-label">Label</label>
+    <main class="drawer-app-content">
+      <!-- Button -->
+      <section>
+        <a href="https://material.io/design/components/buttons.html" class="section-header mdc-typography--button" target="_blank">
+          Button
+          <i class="material-icons">open_in_new</i>
+        </a>
+        <button class="mdc-button mdc-button--raised">
+          Button
+        </button>
+        <button class="mdc-button">
+          Button
+        </button>
+      </section>
+
+      <!-- Text field -->
+      <section>
+        <a href="https://material.io/design/components/text-fields.html" class="section-header mdc-typography--button" target="_blank">
+          Text field
+          <i class="material-icons">open_in_new</i>
+        </a>
+        <div class="mdc-text-field mdc-text-field--outlined">
+          <input type="text" id="tf-outlined" class="mdc-text-field__input">
+          <div class="mdc-notched-outline">
+            <div class="mdc-notched-outline__leading"></div>
+            <div class="mdc-notched-outline__notch">
+              <label for="tf-outlined" class="mdc-floating-label">Label</label>
+            </div>
+            <div class="mdc-notched-outline__trailing"></div>
           </div>
-          <div class="mdc-notched-outline__trailing"></div>
         </div>
-      </div>
-    </section>
-    
-    <!-- Top app bar -->
-    
-    <!-- Chips -->
-    <section>
-      <div class="mdc-chip-set">
-        <div class="mdc-chip" tabindex="0">
-          <div class="mdc-chip__text">Chip 1</div>
+      </section>
+
+      <!-- FAB -->
+      <section>
+        <a href="https://material.io/design/components/buttons-floating-action-button.html" class="section-header mdc-typography--button" target="_blank">
+          FAB
+          <i class="material-icons">open_in_new</i>
+        </a>
+        <button class="mdc-fab" aria-label="Favorite">
+          <span class="mdc-fab__icon material-icons">favorite</span>
+        </button>
+        <button class="mdc-fab mdc-fab--mini" aria-label="Add">
+          <span class="mdc-fab__icon material-icons">add</span>
+        </button>
+      </section>
+
+      <!-- Checkbox -->
+      <section>
+        <a href="https://material.io/design/components/buttons-floating-action-button.html" class="section-header mdc-typography--button" target="_blank">
+          Checkbox
+          <i class="material-icons">open_in_new</i>
+        </a>
+        <div class="mdc-checkbox">
+          <input type="checkbox"
+                 class="mdc-checkbox__native-control"
+                 id="checkbox-1"/>
+          <div class="mdc-checkbox__background">
+            <svg class="mdc-checkbox__checkmark"
+                 viewBox="0 0 24 24">
+              <path class="mdc-checkbox__checkmark-path"
+                    fill="none"
+                    d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+            </svg>
+            <div class="mdc-checkbox__mixedmark"></div>
+          </div>
         </div>
-        <div class="mdc-chip" tabindex="0">
-          <div class="mdc-chip__text">Chip 2</div>
+        <div class="mdc-checkbox">
+          <input type="checkbox"
+                 class="mdc-checkbox__native-control"
+                 id="checkbox-1"/>
+          <div class="mdc-checkbox__background">
+            <svg class="mdc-checkbox__checkmark"
+                 viewBox="0 0 24 24">
+              <path class="mdc-checkbox__checkmark-path"
+                    fill="none"
+                    d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+            </svg>
+            <div class="mdc-checkbox__mixedmark"></div>
+          </div>
         </div>
-        <div class="mdc-chip" tabindex="0">
-          <div class="mdc-chip__text">Chip 3</div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- FAB -->
-    
-    <!-- Card -->
-    
+      </section>
+      
+      <!-- Top app bar -->
+
+      <!-- Card -->
+      
+    </main>
     <!-- import the Material javascript file -->
     <script src="bundle.js" async></script>
   </body>
