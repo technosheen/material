@@ -1,10 +1,11 @@
 dependencies:
   '@material/button': 0.43.0
   '@material/card': 0.43.0
-  '@material/chips': 0.43.0
+  '@material/checkbox': 0.43.0
   '@material/drawer': 0.43.0
   '@material/fab': 0.43.0
   '@material/ripple': 1.0.0
+  '@material/switch': 0.43.0
   '@material/textfield': 0.43.1
   '@material/top-app-bar': 0.43.0
   '@material/typography': 0.42.0
@@ -74,19 +75,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-LDAD+35I53oMNTIDr8fcVfm9BukwtKnos7FD4axstowminSDRujl26g0uTyi9iLhnkR8Vl70Xl60L6kh+GBX1A==
-  /@material/chips/0.43.0:
-    dependencies:
-      '@material/animation': 0.41.0
-      '@material/base': 0.41.0
-      '@material/checkbox': 0.43.0
-      '@material/elevation': 0.43.0
-      '@material/ripple': 0.43.0
-      '@material/shape': 0.43.0
-      '@material/theme': 0.43.0
-      '@material/typography': 0.43.0
-    dev: false
-    resolution:
-      integrity: sha512-iweQCpAabEAx/M0NSmP8c0y+I7nAqB8IWJ9L+a7QGnpcG6Om7Huhr3LSi4+ZmfpM1fTAdC9XKbvRBoPM5NWjPg==
   /@material/dom/0.41.0:
     dev: false
     resolution:
@@ -209,6 +197,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-KGnoQV4G2OQbMe5Lr5Xbk8XNlO93Qi/juxXtd2wrAfiaPmktD8ug0CwdVDOPBOmj9a0gX3Ofi9XWcoU+tLEVjg==
+  /@material/switch/0.43.0:
+    dependencies:
+      '@material/animation': 0.41.0
+      '@material/base': 0.41.0
+      '@material/elevation': 0.43.0
+      '@material/ripple': 0.43.0
+      '@material/rtl': 0.42.0
+      '@material/selection-control': 0.43.0
+      '@material/theme': 0.43.0
+    dev: false
+    resolution:
+      integrity: sha512-WEStItIH7lTSfLOB9G3o5kBAcLT9PWElvg/ZK1DqE/O85k4+cT7SWraQpT2HMJ6kS9fr7abr0MXZyU09kotlKg==
   /@material/textfield/0.43.1:
     dependencies:
       '@material/animation': 0.41.0
@@ -5664,10 +5664,11 @@ shrinkwrapVersion: 3
 specifiers:
   '@material/button': ^0.43.0
   '@material/card': ^0.43.0
-  '@material/chips': ^0.43.0
+  '@material/checkbox': ^0.43.0
   '@material/drawer': ^0.43.0
   '@material/fab': ^0.43.0
   '@material/ripple': ^1.0.0
+  '@material/switch': ^0.43.0
   '@material/textfield': ^0.43.0
   '@material/top-app-bar': ^0.43.0
   '@material/typography': ^0.42.0

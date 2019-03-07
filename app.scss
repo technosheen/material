@@ -4,10 +4,12 @@
 
 // Import the styles for each MDC Web component
 @import "@material/button/mdc-button";
-@import "@material/chips/mdc-chips";
+@import "@material/checkbox/mdc-checkbox";
 @import "@material/drawer/mdc-drawer";
 @import "@material/fab/mdc-fab";
+@import "@material/switch/mdc-switch";
 @import "@material/textfield/mdc-text-field";
+@import "@material/textfield/helper-text/mdc-text-field-helper-text";
 @import "@material/typography/mdc-typography";
 
 body {
@@ -30,7 +32,7 @@ body {
   .team-name {
     outline: none;
     border: none;
-    color: rgba(0, 0, 0, 0.54);
+    color: rgba(0, 0, 0, 0.6);
   }
 }
 
