@@ -41,7 +41,7 @@ body {
   display: flex;
 }
 
-section {
+.component-section {
   margin: 32px;
   
   .section-header {
@@ -67,4 +67,8 @@ section {
 
 .mdc-switch {
    margin: 12px;
+}
+
+.mdc-top-app-bar {
+  width: 400px;
 }
