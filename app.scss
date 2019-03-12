@@ -24,6 +24,7 @@ body {
   
   .mdc-drawer__content {
     padding: 0 28px;
+    color: rgba(0, 0, 0, .87);
   }
   
   .theme-builder-title {
@@ -35,6 +36,11 @@ body {
     outline: none;
     border: none;
     color: rgba(0, 0, 0, 0.6);
+  }
+  
+  h6 {
+    color: rgba(0, 0, 0, .6);
+    margin: 0;
   }
 }
 
