@@ -8,6 +8,7 @@
 @import "@material/checkbox/mdc-checkbox";
 @import "@material/drawer/mdc-drawer";
 @import "@material/fab/mdc-fab";
+@import "@material/form-field/mdc-form-field";
 @import "@material/switch/mdc-switch";
 @import "@material/textfield/mdc-text-field";
 @import "@material/textfield/helper-text/mdc-text-field-helper-text";
@@ -84,14 +85,16 @@ body {
   }
 }
 
-.mdc-button, .mdc-fab {
-  margin-right: 12px;
-}
+.component-section {
+  .mdc-button, .mdc-fab {
+    margin-right: 80px;
+  }
 
-.mdc-switch {
-   margin: 12px;
-}
+  .mdc-checkbox, .mdc-switch {
+     margin: 80px;
+  }
 
-.mdc-top-app-bar {
-  width: 400px;
+  .mdc-top-app-bar {
+    width: 400px;
+  }
 }
