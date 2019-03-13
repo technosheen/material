@@ -54,6 +54,10 @@ body {
 
 .drawer-app-content {
   display: flex;
+  
+  .column {
+    flex-grow: 1;
+  }
 }
 
 .component-section {
