@@ -51,6 +51,10 @@ body {
     background: $material-color-deep-purple-50;
     color: $material-color-deep-purple-a700;
   }
+  
+  .mdc-switch {
+    margin-right: 12px;
+  }
 }
 
 .drawer-app-content {
@@ -58,12 +62,12 @@ body {
   flex: auto;
   
   .column {
-    flex-grow: 1;
+    margin: 20px 40px;
   }
 }
 
 .component-section {
-  margin: 32px;
+  margin: 20px;
   
   .section-header {
     display: flex;
@@ -85,14 +89,9 @@ body {
   }
 }
 
-.component-section {
-  .mdc-button, .mdc-fab {
-    margin-right: 80px;
-  }
-
-  .mdc-checkbox, .mdc-switch {
-     margin: 80px;
-  }
+.component-wrapper {
+  display: inline-block;
+  margin: 20px 80px 20px 0;
 
   .mdc-top-app-bar {
     width: 400px;
