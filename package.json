@@ -27,6 +27,7 @@
     "@material/checkbox": "^0.43.0",
     "@material/drawer": "^0.43.0",
     "@material/fab": "^0.43.0",
+    "@material/form-field": "^1.0.0",
     "@material/ripple": "^1.0.0",
     "@material/switch": "^0.43.0",
     "@material/textfield": "^0.43.0",

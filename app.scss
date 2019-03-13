@@ -54,6 +54,7 @@ body {
 
 .drawer-app-content {
   display: flex;
+  flex: auto;
   
   .column {
     flex-grow: 1;
