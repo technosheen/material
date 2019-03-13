@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@material/button": "^0.43.0",
-    "@material/card": "^0.43.0",
+    "@material/card": "^1.0.0",
     "@material/checkbox": "^0.43.0",
     "@material/drawer": "^0.43.0",
     "@material/fab": "^0.43.0",
