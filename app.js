@@ -14,7 +14,7 @@ const formField = new MDCFormField(document.querySelector('.mdc-form-field'));
 const rtlSwitch = new MDCSwitch(document.querySelector('.rtl-switch'));
 formField.input = rtlSwitch;
 
-const rtlInput = document.querySelector('.rtl-input');
+const rtlInput = document.querySelector('#rtl-input');
 rtlInput.addEventListener('change', function() {
   [].forEach.call(document.querySelectorAll('.column'), function(columnEl) {
     if (rtlInput.checked) {

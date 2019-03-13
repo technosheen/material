@@ -52,8 +52,12 @@ body {
     color: $material-color-deep-purple-a700;
   }
   
-  .mdc-switch {
-    margin-right: 12px;
+  .mdc-form-field {
+    margin: 12px 0;
+    
+    .rtl-switch {
+      margin-right: 16px;
+    }
   }
 }
 
