@@ -14,14 +14,28 @@ const formField = new MDCFormField(document.querySelector('.mdc-form-field'));
 const rtlSwitch = new MDCSwitch(document.querySelector('.rtl-switch'));
 formField.input = rtlSwitch;
 
+const rtlInput = document.querySelector('.rtl-input');
+rtlInput.addEventListener('change', function() {
+  [].forEach.call(document.querySelectorAll('.column'), function(columnEl) {
+    if (rtlInput.checked) {
+      columnEl.setAttribute('dir', 'rtl');
+    } else {
+      columnEl.removeAttribute('dir');
+    }
+  });
+});
+
+// Stickers
+const main = document.querySelector('.main-content');
+
 // Select HTML components
-const buttonEls = Array.from(document.querySelectorAll('.mdc-button'));
-const textFieldEl = document.querySelector('.mdc-text-field');
-// const helperTextEl = document.querySelector('.mdc-text-field-helper-text');
-const fabEls = Array.from(document.querySelectorAll('.mdc-fab'));
-const checkboxEls = Array.from(document.querySelectorAll('.mdc-checkbox'));
-const switchEls = Array.from(document.querySelectorAll('.mdc-switch'));
-const topAppBarEl = document.querySelector('.mdc-top-app-bar');
+const buttonEls = Array.from(main.querySelectorAll('.mdc-button'));
+const textFieldEl = main.querySelector('.mdc-text-field');
+// const helperTextEl = main.querySelector('.mdc-text-field-helper-text');
+const fabEls = Array.from(main.querySelectorAll('.mdc-fab'));
+const checkboxEls = Array.from(main.querySelectorAll('.mdc-checkbox'));
+const switchEls = Array.from(main.querySelectorAll('.mdc-switch'));
+const topAppBarEl = main.querySelector('.mdc-top-app-bar');
 
 // Instantiate all components
 buttonEls.forEach((el) => new MDCRipple(el));
