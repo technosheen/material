@@ -30,6 +30,7 @@
     "@material/ripple": "^1.0.0",
     "@material/switch": "^0.43.0",
     "@material/textfield": "^0.43.0",
+    "@material/theme": "^1.0.0",
     "@material/top-app-bar": "^1.0.0",
     "@material/typography": "^0.42.0"
   },

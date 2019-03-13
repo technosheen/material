@@ -10,6 +10,7 @@
 @import "@material/switch/mdc-switch";
 @import "@material/textfield/mdc-text-field";
 @import "@material/textfield/helper-text/mdc-text-field-helper-text";
+@import "@material/theme/color-palette";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/typography/mdc-typography";
 
@@ -45,8 +46,9 @@ body {
   
   code {
     font-family: 'Roboto mono';
-    background: rgba($mdc-theme-secondary, 0.38);
-    color: $mdc-theme-primary;
+    background: $material-color-deep-purple-50;
+    color: $material-color-deep-purple-a700;
+  }
 }
 
 .drawer-app-content {
