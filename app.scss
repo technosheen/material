@@ -60,17 +60,20 @@ body {
   
   .section-header {
     display: flex;
-    align-items: center;
-    margin: 0;
-    color: rgba(0, 0, 0, 0.54);
+    
+    a {
+      display: flex;
+      align-items: center;
+      color: rgba(0, 0, 0, 0.54);
+    
+      &:hover {
+        color: rgba(0, 0, 0, 0.87);
+      }
+    }
     
     .material-icons {
       font-size: 1rem;
       padding-left: 4px;
-    }
-    
-    &:hover {
-      color: rgba(0, 0, 0, 0.87);
     }
   }
 }
