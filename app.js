@@ -7,7 +7,8 @@ import {MDCTextFieldHelperText} from '@material/textfield/helper-text';
 import {MDCTopAppBar} from '@material/top-app-bar';
 
 // Set text in HTML
-// document.querySelector('.glitch-url').textContent = process.env.PROJECT_ID;
+console.log(document.querySelector('.glitch-url'));
+document.querySelector('.glitch-url').textContent = process.env.PROJECT_DOMAIN;
 
 // Inside the drawer
 const formField = new MDCFormField(document.querySelector('.mdc-form-field'));
