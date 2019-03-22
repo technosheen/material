@@ -1,8 +1,16 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = [{
   entry: ['./app.scss', './app.js'],
   output: {
     filename: 'bundle.js',
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      domain: process.env.PROJECT_DOMAIN
+    })
+  ],
   module: {
     rules: [
       {
