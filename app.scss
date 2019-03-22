@@ -1,44 +1,23 @@
-// Material Theming
-// Define theme variables before importing any MDC Web component styles
-@import "my-theme";
 
-// Import the styles for each MDC Web component
-@import "@material/button/mdc-button";
-@import "@material/card/mdc-card";
-@import "@material/checkbox/mdc-checkbox";
-@import "@material/drawer/mdc-drawer";
-@import "@material/fab/mdc-fab";
-@import "@material/form-field/mdc-form-field";
-@import "@material/switch/mdc-switch";
-@import "@material/textfield/mdc-text-field";
-@import "@material/textfield/helper-text/mdc-text-field-helper-text";
-@import "@material/theme/color-palette";
-@import "@material/top-app-bar/mdc-top-app-bar";
-@import "@material/typography/mdc-typography";
+// All theming and component-specific styling is applied here!
+@import "component-styles";
+
+// The rest of this file deals with the Material Theme Builder layout
 
 body {
   height: 100vh;
   display: flex;
-  margin: 0;
+  margin: 40px;
 }
 
-.mdc-drawer {
+// Theme Builder drawer content
+
+.theme-builder-drawer {
   width: 320px;
   
   .mdc-drawer__content {
     padding: 0 28px;
     color: rgba(0, 0, 0, .87);
-  }
-  
-  .theme-builder-title {
-    font-style: italic;
-    font-weight: 800;
-  }
-
-  .team-name {
-    outline: none;
-    border: none;
-    color: rgba(0, 0, 0, 0.6);
   }
   
   h6 {
@@ -47,9 +26,9 @@ body {
   }
   
   code {
+    @include mdc-theme-prop(color, $mdc-theme-primary);
     font-family: 'Roboto mono';
-    background: $material-color-deep-purple-50;
-    color: $material-color-deep-purple-a700;
+    background: $material-color-grey-200;
   }
   
   .mdc-form-field {
@@ -60,14 +39,37 @@ body {
     }
   }
 }
+  
+.theme-builder-title {
+  font-style: italic;
+  font-weight: 800;
+}
+
+.team-name {
+  margin-left: -1px; // Adjust for 2px border
+}
+
+.glitch-url {
+  @include mdc-theme-prop(color, $mdc-theme-primary);
+  margin-top: 0;
+}
+
+// Main content layout
 
 .main-content {
   display: flex;
-  flex: auto;
+  flex-wrap: wrap;
   
   .column {
-    margin: 20px 40px;
-    flex-grow: 1;
+    margin: 0 40px;
+  }
+}
+
+.component-section-row {
+  display: flex;
+
+  .component-section:first-child {
+    width: 240px;
   }
 }
 
@@ -89,21 +91,11 @@ body {
     
     .material-icons {
       font-size: 1rem;
-      padding: 4px;
+      padding: 8px;
     }
   }
 }
 
 .component-wrapper {
-  display: inline-block;
-  margin: 20px 80px 20px 0;
-  
-  [dir="rtl"] & {
-    margin: 20px 0 20px 80px;
-  }
-
-  .mdc-top-app-bar {
-    width: 400px;
-    position: relative;
-  }
+  margin: 20px 0;
 }
