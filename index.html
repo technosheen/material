@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Material Starter Kit</title>
+    <title>Material Theme Builder</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- import Material Icons from Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!--import custom Typography -->
-    <link href="https://fonts.googleapis.com/css?family=Cabin:500" rel="stylesheet">
     <!-- import the Material stylesheet -->
     <link rel="stylesheet" href="bundle.css">
   </head>
-  <body class="mdc-typography">
-    <!-- Apply Material headline3 style to this <h1> element -->
-    
+  <body class="mdc-typography">    
     <aside class="theme-builder-drawer mdc-drawer">
       <div class="mdc-drawer__content">
         <h1 class="theme-builder-title mdc-typography--headline5">Material Theme Builder</h1>
@@ -27,17 +23,18 @@
             <div class="mdc-notched-outline__trailing"></div>
           </div>
         </div>
-        <p class="glitch-url mdc-typography--overline">glitch.com/~<%= htmlWebpackPlugin.options.domain %></p>
+        <p class="glitch-url mdc-typography--overline">glitch.com/~purple-tuba</p>
+        <!-- <h6 class="glitch-url mdc-typography--overline">glitch.com/~<%= htmlWebpackPlugin.options.domain %></h6> -->
 
         <h6 class="mdc-typography--overline">How to Use Theme Builder</h6>
         <p class="mdc-typography--body2">
-          This Theme Builder allows you to build your own Material Theme using <code>.scss</code> variables and realize it through a cohesive, stylized set of Material Components.
+          Build your own custom Material Theme by remixing and styling these themeable components.
         </p>
         <p class="mdc-typography--body2">
-          Modify this project's <code>my-theme.scss</code> file to see your Material Theme cascade through the components on the stickersheet.
+            Modify the variables in your project's <code>my-theme.scss</code> file to see your custom styles cascade through Material Components for the web.
         </p>
-        <h6 class="mdc-typography--overline">Theme Builder Options</h6>
-        
+
+        <h6 class="mdc-typography--overline">Theme Builder Options</h6>        
         <div class="mdc-form-field">
           <div class="mdc-switch rtl-switch">
             <div class="mdc-switch__track"></div>
@@ -107,7 +104,6 @@
               </a>
             </div>
             <div class="component-wrapper">
-                <button class="mdc-button" id="open-menu-button">Open Menu</button>
                 <div class="mdc-menu-surface--anchor">
                   <div class="mdc-menu mdc-menu-surface mdc-menu-surface--open" tabindex="-1">
                     <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
@@ -217,8 +213,7 @@
             <div class="component-wrapper checkbox-component-wrapper">
               <div class="mdc-checkbox">
                 <input type="checkbox"
-                      class="mdc-checkbox__native-control"
-                      id="checkbox-1"/>
+                      class="mdc-checkbox__native-control" />
                 <div class="mdc-checkbox__background">
                   <svg class="mdc-checkbox__checkmark"
                       viewbox="0 0 24 24">
@@ -231,8 +226,7 @@
               </div>
               <div class="mdc-checkbox indeterminate-checkbox">
                 <input type="checkbox"
-                      class="mdc-checkbox__native-control"
-                      id="checkbox-1"/>
+                      class="mdc-checkbox__native-control" />
                 <div class="mdc-checkbox__background">
                   <svg class="mdc-checkbox__checkmark"
                       viewbox="0 0 24 24">
@@ -246,8 +240,7 @@
               <div class="mdc-checkbox">
                 <input type="checkbox"
                       class="mdc-checkbox__native-control"
-                      id="checkbox-2"
-                      checked/>
+                      checked />
                 <div class="mdc-checkbox__background">
                   <svg class="mdc-checkbox__checkmark"
                       viewbox="0 0 24 24">
@@ -335,7 +328,7 @@
             <div class="mdc-chip-set mdc-chip-set--filter">
               <div class="mdc-chip">
                 <div class="mdc-chip__checkmark" >
-                  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                  <svg class="mdc-chip__checkmark-svg" viewbox="-2 -3 30 30">
                     <path class="mdc-chip__checkmark-path" fill="none" stroke="black"
                           d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
                   </svg>
@@ -344,7 +337,7 @@
               </div>
               <div class="mdc-chip mdc-chip--selected">
                 <div class="mdc-chip__checkmark" >
-                  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                  <svg class="mdc-chip__checkmark-svg" viewbox="-2 -3 30 30">
                     <path class="mdc-chip__checkmark-path" fill="none" stroke="black"
                           d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
                   </svg>
@@ -353,7 +346,7 @@
               </div>
               <div class="mdc-chip mdc-chip--selected">
                 <div class="mdc-chip__checkmark" >
-                  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                  <svg class="mdc-chip__checkmark-svg" viewbox="-2 -3 30 30">
                     <path class="mdc-chip__checkmark-path" fill="none" stroke="black"
                           d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
                   </svg>
@@ -366,7 +359,7 @@
 
         <div class="component-section-row">
           <!-- Select -->
-          <section class="component-section" id="component-section-select">
+          <section class="component-section">
             <div class="section-header">
               <a href="https://material.io/develop/web/components/input-controls/select-menus/" class="mdc-typography--button" target="_blank">
                 Select
@@ -399,7 +392,7 @@
           </section>
 
           <!-- Select -->
-          <section class="component-section" id="component-section-select">
+          <section class="component-section">
             <div class="section-header">
               <a href="https://material.io/develop/web/components/input-controls/select-menus/" class="mdc-typography--button" target="_blank">
                 Outlined Select
@@ -727,33 +720,6 @@
                 <img class="mdc-image-list__image" src="https://material-components.github.io/material-components-web-catalog/static/media/photos/2x3/1.jpg">
               </li>
             </ul>
-          </div>
-        </section>
-
-        <!-- Material on Glitch -->
-        <section class="component-section">
-          <div class="section-header">
-            <a href="https://glitch.com/@material" class="mdc-typography--button" target="_blank">
-              glitch.com/@material
-              <i class="material-icons">open_in_new</i>
-            </a>
-          </div>
-          <div class="component-wrapper">
-            <div class="mdc-card glitch-card">
-                <div class="glitch-card__primary">
-                  <h2 class="glitch-card__title mdc-typography--headline4">Thanks for using Material Theme Builder!</h2>
-                  <p class="glitch-card__subtitle mdc-typography--subtitle">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  <button class="glitch-card__action-button mdc-button mdc-button--outlined">
-                    <a href="https://glitch.com/@material" class="mdc-typography--button" target="_blank">
-                      Get Started with Material
-                    </a>
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 

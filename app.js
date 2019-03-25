@@ -117,7 +117,7 @@ slider.value = 5;
 const menuEl = main.querySelector('.mdc-menu');
 const menu = new MDCMenu(menuEl);
 menu.open = true;
-main.querySelector('#open-menu-button').addEventListener('click', () => menu.open = true);
+menuEl.addEventListener('MDCMenuSurface:closed', () => menu.open = true);
 
 //
 // Inside the Theme Builder drawer
