@@ -117,7 +117,8 @@ slider.value = 5;
 const menuEl = main.querySelector('.mdc-menu');
 const menu = new MDCMenu(menuEl);
 menu.open = true;
-menuEl.addEventListener('MDCMenuSurface:closed', () => menu.open = true);
+// Override MDCMenuSurfaceFoundation so the menu never closes
+menu.menuSurface_.foundation_.close = () => {};
 
 //
 // Inside the Theme Builder drawer
