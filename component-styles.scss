@@ -26,7 +26,6 @@
 @import "@material/textfield/mdc-text-field";
 @import "@material/textfield/helper-text/mdc-text-field-helper-text";
 @import "@material/theme/color-palette";
-@import "@material/theme/functions";
 @import "@material/theme/mixins";
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/typography/mdc-typography";
@@ -35,7 +34,7 @@
 
 .component-wrapper > .mdc-button,
 .component-wrapper > .mdc-fab {
-  margin-right: 80px;
+  margin-right: 96px;
 }
 
 // Checkbox and radio
@@ -155,66 +154,23 @@
   margin: 0;
 }
 
-// Thanks for using Material! card
-
-.glitch-card {
-  @include mdc-card-fill-color($mdc-theme-primary);
-  $fill-tone: mdc-theme-tone($mdc-theme-primary);
-
-  width: 400px;
-  
-  .glitch-card__primary {
-    padding: 1rem;
-  }
-  
-  .glitch-card__title {
-    margin: 20px;
-    @if ($fill-tone == "dark") {
-      @include mdc-theme-prop(color, text-primary-on-dark);
-    } @else {
-      @include mdc-theme-prop(color, text-primary-on-light);
-    }
-  }
-  
-  .glitch-card__subtitle {
-    margin: 20px;
-    @if ($fill-tone == "dark") {
-      @include mdc-theme-prop(color, text-secondary-on-dark);
-    } @else {
-      @include mdc-theme-prop(color, text-secondary-on-light);
-    }
+.component-wrapper {
+  &.text-field-component-wrapper {
+    margin-bottom: 96px;
   }
 
-  .glitch-card__action-button {
-    margin: 0 20px 20px;
-    @include mdc-button-outline-width(1px);
-    @include mdc-button-filled-accessible($mdc-theme-primary);
-    @if ($fill-tone == "dark") {
-      @include mdc-button-outline-color(text-primary-on-dark);
-    } @else {
-      @include mdc-button-outline-color(text-primary-on-light);
-    }
-
-    a {
-      @if ($fill-tone == "dark") {
-        @include mdc-theme-prop(color, text-primary-on-dark);
-      } @else {
-        @include mdc-theme-prop(color, text-primary-on-light);
-      }
-    }
+  // Offset built-in padding to left-align all components
+  &.chips-component-wrapper {
+    margin-left: -8px;
+    margin-bottom: 96px;
   }
-}
 
-// Offset built-in padding to left-align all components
+  &.checkbox-component-wrapper, &.radio-component-wrapper {
+    margin-left: -10px;
+  }
 
-.chips-component-wrapper {
-  margin-left: -8px;
-}
+  &.icon-button-component-wrapper {
+    margin-left: -12px;
+  }
 
-.checkbox-component-wrapper, .radio-component-wrapper {
-  margin-left: -10px;
-}
-
-.icon-button-component-wrapper {
-  margin-left: -12px;
 }
