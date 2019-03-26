@@ -23,6 +23,10 @@
 @import "@material/slider/mdc-slider";
 @import "@material/snackbar/mdc-snackbar";
 @import "@material/switch/mdc-switch";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
 @import "@material/textfield/mdc-text-field";
 @import "@material/textfield/helper-text/mdc-text-field-helper-text";
 @import "@material/theme/color-palette";
@@ -52,6 +56,7 @@
 // Top app bar
 
 .mdc-top-app-bar {
+  @include mdc-elevation(16);
   position: relative;
 
   &:not(.mdc-top-app-bar--short) {
@@ -104,7 +109,7 @@
   background: rgba(0, 0, 0, 0.3);
 
   .mdc-drawer {
-    @include mdc-elevation(8);
+    @include mdc-elevation(16);
 
     .mdc-drawer__content {
       padding: 0;

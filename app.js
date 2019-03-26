@@ -12,16 +12,17 @@ import {MDCSelect} from '@material/select';
 import {MDCSlider} from '@material/slider';
 import {MDCSnackbar} from '@material/snackbar';
 import {MDCSwitch} from '@material/switch';
+import {MDCTabBar} from '@material/tab-bar';
 import {MDCTextField} from '@material/textfield';
 import {MDCTextFieldHelperText} from '@material/textfield/helper-text';
 import {MDCTopAppBar} from '@material/top-app-bar';
 
+//
+// Instantiate components in the main content
+//
+
 // Select main content
 const main = document.querySelector('.main-content');
-
-//
-// Instantiate all components
-//
 
 // Button
 const buttonEls = Array.from(main.querySelectorAll('.mdc-button'));
@@ -120,17 +121,34 @@ menu.open = true;
 // Override MDCMenuSurfaceFoundation so the menu never closes
 menu.menuSurface_.foundation_.close = () => {};
 
+// Tabs
+const tabBarEl = main.querySelector('.mdc-tab-bar');
+new MDCTabBar(tabBarEl);
+
 //
-// Inside the Theme Builder drawer
+// Instantiate components inside the Theme Builder drawer
 //
-const teamName = new MDCTextField(document.querySelector('.team-name'));
-const formField = new MDCFormField(document.querySelector('.mdc-form-field'));
-const rtlSwitch = new MDCSwitch(document.querySelector('.rtl-switch'));
+
+// Select main content
+const themeBuilderDrawer = document.querySelector('.theme-builder-drawer');
+
+new MDCTabBar(themeBuilderDrawer.querySelector('.mdc-tab-bar'));
+themeBuilderDrawer.querySelector('.drawer-tab--instructions').addEventListener('MDCTab:interacted', () => {
+  themeBuilderDrawer.querySelector('.drawer-content--instructions').style.display = 'block';
+  themeBuilderDrawer.querySelector('.drawer-content--theme-summary').style.display = 'none';
+});
+themeBuilderDrawer.querySelector('.drawer-tab--theme-summary').addEventListener('MDCTab:interacted', () => {
+  themeBuilderDrawer.querySelector('.drawer-content--instructions').style.display = 'none';
+  themeBuilderDrawer.querySelector('.drawer-content--theme-summary').style.display = 'block';
+});
+
+const formField = new MDCFormField(themeBuilderDrawer.querySelector('.mdc-form-field'));
+const rtlSwitch = new MDCSwitch(themeBuilderDrawer.querySelector('.rtl-switch'));
 formField.input = rtlSwitch;
 
-const rtlInput = document.querySelector('#rtl-input');
+const rtlInput = themeBuilderDrawer.querySelector('#rtl-input');
 rtlInput.addEventListener('change', function() {
-  [].forEach.call(document.querySelectorAll('.column'), function(columnEl) {
+  [].forEach.call(themeBuilderDrawer.querySelectorAll('.column'), function(columnEl) {
     if (rtlInput.checked) {
       columnEl.setAttribute('dir', 'rtl');
       linearProgressEl.classList.add('mdc-linear-progress--reversed');
