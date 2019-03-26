@@ -5,15 +5,15 @@
 // The rest of this file deals with the Material Theme Builder layout
 
 body {
-  height: 100vh;
   display: flex;
-  margin: 40px;
+  margin: 0;
 }
 
 // Theme Builder drawer content
 
 .theme-builder-drawer {
   width: 400px;
+  height: auto;
 
   .theme-builder-drawer-divider {
     margin: 0;
@@ -54,8 +54,13 @@ body {
 }
   
 .theme-builder-title {
+  color: $material-color-grey-800;
   font-style: italic;
   font-weight: 800;
+
+  svg {
+    vertical-align: -2px;
+  }
 }
 
 .drawer-content--theme-summary {
@@ -220,13 +225,13 @@ body {
 
   // Application of shape
   .theme-summary-shape--small {
-    border-radius: $mdc-shape-small-component-radius;
+    @include mdc-shape-radius($mdc-shape-small-component-radius);
   }
   .theme-summary-shape--medium {
-    border-radius: $mdc-shape-medium-component-radius;
+    @include mdc-shape-radius($mdc-shape-medium-component-radius);
   }
   .theme-summary-shape--large {
-    border-radius: $mdc-shape-large-component-radius;
+    @include mdc-shape-radius($mdc-shape-large-component-radius);
   }
 }
 
@@ -239,10 +244,14 @@ body {
 
 .main-content {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
+  width: 100%;
+  padding: 2vh 5vw 2vh 0;
   
   .column {
-    margin: 0 40px;
+    width: 32vw;
+    min-width: 500px;
   }
 }
 
