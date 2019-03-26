@@ -1,6 +1,7 @@
 import {MDCCheckbox} from '@material/checkbox';
 import {MDCChipSet} from '@material/chips';
 import {MDCDialog} from '@material/dialog';
+import {MDCDrawer} from '@material/drawer';
 import {MDCFormField} from '@material/form-field';
 import {MDCIconButtonToggle} from '@material/icon-button';
 import {MDCLinearProgress} from '@material/linear-progress';
@@ -18,55 +19,54 @@ import {MDCTextFieldHelperText} from '@material/textfield/helper-text';
 import {MDCTopAppBar} from '@material/top-app-bar';
 
 //
-// Instantiate components in the main content
+// Instantiate all components in the main content
 //
 
-// Select main content
-const main = document.querySelector('.main-content');
+const mainEl = document.querySelector('.main-content');
 
 // Button
-const buttonEls = Array.from(main.querySelectorAll('.mdc-button'));
+const buttonEls = Array.from(mainEl.querySelectorAll('.mdc-button'));
 buttonEls.forEach((el) => new MDCRipple(el));
 
 // Icon button
-const iconButtonEls = Array.from(main.querySelectorAll('.mdc-icon-button:not(#icon-toggle-button'));
+const iconButtonEls = Array.from(mainEl.querySelectorAll('.mdc-icon-button:not(#icon-toggle-button'));
 iconButtonEls.forEach((el) => new MDCRipple(el));
 
 // Icon button toggle
-const iconToggleEl = main.querySelector('#icon-toggle-button');
+const iconToggleEl = mainEl.querySelector('#icon-toggle-button');
 const iconToggle = new MDCIconButtonToggle(iconToggleEl);
 iconToggle.unbounded = true;
 
 // Card
-const cardPrimaryActionEls = Array.from(main.querySelectorAll('.mdc-card__primary-action'));
+const cardPrimaryActionEls = Array.from(mainEl.querySelectorAll('.mdc-card__primary-action'));
 cardPrimaryActionEls.forEach((el) => new MDCRipple(el));
 
 // Chips
-const chipSetEls = Array.from(main.querySelectorAll('.mdc-chip-set'));
+const chipSetEls = Array.from(mainEl.querySelectorAll('.mdc-chip-set'));
 chipSetEls.forEach((el) => new MDCChipSet(el));
 
 // Text field
-const textFieldEls = Array.from(main.querySelectorAll('.mdc-text-field'));
+const textFieldEls = Array.from(mainEl.querySelectorAll('.mdc-text-field'));
 textFieldEls.forEach((el) => {
   let textField = new MDCTextField(el);
   if (el.classList.contains('text-field-with-input')) {
     textField.value = 'Input text';
   }
 });
-const helperTextEls = Array.from(main.querySelectorAll('.mdc-text-field-helper-text'));
+const helperTextEls = Array.from(mainEl.querySelectorAll('.mdc-text-field-helper-text'));
 helperTextEls.forEach((el) => new MDCTextFieldHelperText(el));
 
 // Linear progress
-const linearProgressEl = main.querySelector('.mdc-linear-progress');
+const linearProgressEl = mainEl.querySelector('.mdc-linear-progress');
 const linearProgress = new MDCLinearProgress(linearProgressEl);
 linearProgress.progress = 0.5;
 
 // FAB
-const fabEls = Array.from(main.querySelectorAll('.mdc-fab'));
+const fabEls = Array.from(mainEl.querySelectorAll('.mdc-fab'));
 fabEls.forEach((el) => new MDCRipple(el));
 
 // Checkbox
-const checkboxEls = Array.from(main.querySelectorAll('.mdc-checkbox'));
+const checkboxEls = Array.from(mainEl.querySelectorAll('.mdc-checkbox'));
 checkboxEls.forEach((el) => {
   let checkbox = new MDCCheckbox(el);
   if (el.classList.contains('indeterminate-checkbox')) {
@@ -75,22 +75,19 @@ checkboxEls.forEach((el) => {
 });
 
 // Radio
-const radioEls = Array.from(main.querySelectorAll('.mdc-radio'));
+const radioEls = Array.from(mainEl.querySelectorAll('.mdc-radio'));
 radioEls.forEach((el) => new MDCRadio(el));
 
 // Switch
-const switchEls = Array.from(main.querySelectorAll('.mdc-switch'));
+const switchEls = Array.from(mainEl.querySelectorAll('.mdc-switch'));
 switchEls.forEach((el) => new MDCSwitch(el));
 
 // Top app bar
-const topAppBarEls = Array.from(main.querySelectorAll('.mdc-top-app-bar'));
-topAppBarEls.forEach((el) => {
-  let topAppBar = new MDCTopAppBar(el);
-  topAppBar.setScrollTarget(main);
-});
+const topAppBarEls = Array.from(mainEl.querySelectorAll('.mdc-top-app-bar'));
+topAppBarEls.forEach((el) => new MDCTopAppBar(el));
 
 // List
-const listEls = Array.from(main.querySelectorAll('.mdc-list'));
+const listEls = Array.from(mainEl.querySelectorAll('.mdc-list'));
 listEls.forEach((el) => {
   let list = new MDCList(el);
   list.listElements.map((listItemEl) => new MDCRipple(listItemEl));
@@ -98,57 +95,56 @@ listEls.forEach((el) => {
 });
 
 // Select
-const selectEls = Array.from(main.querySelectorAll('.mdc-select'));
+const selectEls = Array.from(mainEl.querySelectorAll('.mdc-select'));
 selectEls.forEach((el) => new MDCSelect(el));
 
 // Snackbar
-const snackbarEl = main.querySelector('.mdc-snackbar');
+const snackbarEl = mainEl.querySelector('.mdc-snackbar');
 new MDCSnackbar(snackbarEl);
 
 // Dialog
-const dialogEl = main.querySelector('.mdc-dialog');
+const dialogEl = mainEl.querySelector('.mdc-dialog');
 new MDCDialog(dialogEl);
 
 // Slider
-const sliderEl = main.querySelector('.mdc-slider');
+const sliderEl = mainEl.querySelector('.mdc-slider');
 const slider = new MDCSlider(sliderEl);
 slider.value = 5;
 
 // Menu
-const menuEl = main.querySelector('.mdc-menu');
+const menuEl = mainEl.querySelector('.mdc-menu');
 const menu = new MDCMenu(menuEl);
 menu.open = true;
 // Override MDCMenuSurfaceFoundation so the menu never closes
 menu.menuSurface_.foundation_.close = () => {};
 
 // Tabs
-const tabBarEl = main.querySelector('.mdc-tab-bar');
+const tabBarEl = mainEl.querySelector('.mdc-tab-bar');
 new MDCTabBar(tabBarEl);
 
 //
-// Instantiate components inside the Theme Builder drawer
+// Theme Builder drawer
 //
 
-// Select main content
-const themeBuilderDrawer = document.querySelector('.theme-builder-drawer');
+const themeBuilderDrawerEl = document.querySelector('.theme-builder-drawer');
 
-new MDCTabBar(themeBuilderDrawer.querySelector('.mdc-tab-bar'));
-themeBuilderDrawer.querySelector('.drawer-tab--instructions').addEventListener('MDCTab:interacted', () => {
-  themeBuilderDrawer.querySelector('.drawer-content--instructions').style.display = 'block';
-  themeBuilderDrawer.querySelector('.drawer-content--theme-summary').style.display = 'none';
+new MDCTabBar(themeBuilderDrawerEl.querySelector('.mdc-tab-bar'));
+themeBuilderDrawerEl.querySelector('.drawer-tab--instructions').addEventListener('MDCTab:interacted', () => {
+  themeBuilderDrawerEl.querySelector('.drawer-content--instructions').style.display = 'block';
+  themeBuilderDrawerEl.querySelector('.drawer-content--theme-summary').style.display = 'none';
 });
-themeBuilderDrawer.querySelector('.drawer-tab--theme-summary').addEventListener('MDCTab:interacted', () => {
-  themeBuilderDrawer.querySelector('.drawer-content--instructions').style.display = 'none';
-  themeBuilderDrawer.querySelector('.drawer-content--theme-summary').style.display = 'block';
+themeBuilderDrawerEl.querySelector('.drawer-tab--theme-summary').addEventListener('MDCTab:interacted', () => {
+  themeBuilderDrawerEl.querySelector('.drawer-content--instructions').style.display = 'none';
+  themeBuilderDrawerEl.querySelector('.drawer-content--theme-summary').style.display = 'block';
 });
 
-const formField = new MDCFormField(themeBuilderDrawer.querySelector('.mdc-form-field'));
-const rtlSwitch = new MDCSwitch(themeBuilderDrawer.querySelector('.rtl-switch'));
+const formField = new MDCFormField(themeBuilderDrawerEl.querySelector('.mdc-form-field'));
+const rtlSwitch = new MDCSwitch(themeBuilderDrawerEl.querySelector('.rtl-switch'));
 formField.input = rtlSwitch;
 
-const rtlInput = themeBuilderDrawer.querySelector('#rtl-input');
+const rtlInput = themeBuilderDrawerEl.querySelector('#rtl-input');
 rtlInput.addEventListener('change', function() {
-  [].forEach.call(themeBuilderDrawer.querySelectorAll('.column'), function(columnEl) {
+  [].forEach.call(mainEl.querySelectorAll('.column'), function(columnEl) {
     if (rtlInput.checked) {
       columnEl.setAttribute('dir', 'rtl');
       linearProgressEl.classList.add('mdc-linear-progress--reversed');
@@ -159,3 +155,29 @@ rtlInput.addEventListener('change', function() {
     slider.layout();
   });
 });
+
+//
+// Theme Builder app bar
+//
+
+const themeBuilderAppBar = new MDCTopAppBar(document.querySelector('.theme-builder-app-bar'));
+const initModalDrawer = () => {
+  themeBuilderDrawerEl.classList.add("mdc-drawer--modal");
+  const themeBuilderDrawer = new MDCDrawer(themeBuilderDrawerEl);
+  themeBuilderDrawer.open = false;
+  themeBuilderAppBar.setScrollTarget(mainEl);
+  themeBuilderAppBar.listen('MDCTopAppBar:nav', () => {
+    themeBuilderDrawer.open = !themeBuilderDrawer.open;
+  });
+}
+
+// Toggle between permanent drawer and modal drawer at 900px
+const setDrawerVariant = () => {
+  if (window.matchMedia("(max-width: 900px)").matches) {
+    initModalDrawer();
+  } else {
+    themeBuilderDrawerEl.classList.remove("mdc-drawer--modal");
+  }
+}
+window.addEventListener('resize', setDrawerVariant);
+setDrawerVariant();

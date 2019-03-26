@@ -19,6 +19,7 @@
 @import "@material/menu/mdc-menu";
 @import "@material/menu-surface/mdc-menu-surface";
 @import "@material/radio/mdc-radio";
+@import "@material/ripple/mixins";
 @import "@material/select/mdc-select";
 @import "@material/shape/mixins";
 @import "@material/shape/functions";
@@ -51,7 +52,6 @@
 // Top app bar
 
 .mdc-top-app-bar {
-  @include mdc-elevation(16);
   position: relative;
 
   &:not(.mdc-top-app-bar--short) {
@@ -116,6 +116,23 @@
 
 .mdc-text-field {
   width: 100%;
+}
+
+// Tabs
+.component-wrapper .mdc-tab-bar {
+  background: $mdc-theme-primary;
+
+  .mdc-tab {
+    @include mdc-tab-text-label-color($mdc-theme-on-primary);
+
+    .mdc-tab__ripple {
+      @include mdc-states($mdc-theme-on-primary);
+    }
+  }
+
+  .mdc-tab-indicator {
+    @include mdc-tab-indicator-underline-color($mdc-theme-on-primary);
+  }
 }
 
 // Snackbar

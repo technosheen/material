@@ -1,6 +1,6 @@
 
 // All theming and component-specific styling is applied here!
-@import "component-styles";
+@import "components";
 
 // The rest of this file deals with the Material Theme Builder layout
 
@@ -15,12 +15,20 @@ body {
   width: 400px;
   height: auto;
 
+  &.mdc-drawer--modal {
+    height: 100%;
+  }
+
+  .mdc-drawer__header {
+    padding: 24px;
+  }
+
   .theme-builder-drawer-divider {
     margin: 0;
   }
   
   .mdc-drawer__content {
-    padding: 16px;
+    padding: 24px;
     color: rgba(0, 0, 0, .87);
   }
   
@@ -59,7 +67,8 @@ body {
   font-weight: 800;
 
   svg {
-    vertical-align: -2px;
+    vertical-align: -3px;
+    margin-right: 4px;
   }
 }
 
@@ -85,6 +94,8 @@ body {
   margin-top: 0;
   font-size: 0.65rem;
 }
+
+// Theme Summary content
 
 .mdc-list-divider.theme-summary-divider {
   border-bottom-width: 2px;
@@ -238,6 +249,28 @@ body {
 .mdc-list-divider.typography-baseline-divider {
   margin-top: 0;
   margin-bottom: 12px;
+  border-bottom-color: $material-color-grey-200;
+}
+
+// Theme Builder app bar (shown on smaller screens)
+
+.theme-builder-app-bar {
+  display: none;
+
+  @include mdc-top-app-bar-fill-color(white);
+  @include mdc-top-app-bar-icon-ink-color($material-color-grey-800);
+  @include mdc-elevation(1);
+
+  .theme-builder-title {
+    width: 100%;
+  }
+}
+
+// Breakpoint <900px
+@media (max-width: 900px) {
+  .theme-builder-app-bar {
+    display: block;
+  }
 }
 
 // Main content layout
