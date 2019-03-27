@@ -1,5 +1,15 @@
 // Material Theming
-$mdc-theme-primary: #a00f38;
-$mdc-theme-secondary: #d73963;
+// Define the theme variables before importing any MDC Web components
+$mdc-theme-primary: #303f9f;
+$mdc-theme-secondary: #ec407a;
+
 $mdc-typography-font-family: unquote("Cabin, sans-serif");
-$mdc-shape-small-component-radius: (4px);
+$mdc-typography-styles-button: (
+ font-size: 14px,
+ font-weight: 500,
+ letter-spacing: 0.05em,
+);
+
+$mdc-shape-small-component-radius: 12px;
+$mdc-shape-medium-component-radius: 0px;
+$mdc-shape-large-component-radius: 20px;
