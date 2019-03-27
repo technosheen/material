@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- import the Material stylesheet -->
     <link rel="stylesheet" href="bundle.css">
-     <!-- Add favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.glitch.com/9c389208-b279-4e96-bcbc-e5f8712d8706%2Ffavicon-32x32.png?1553712190412">
-    <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.glitch.com/9c389208-b279-4e96-bcbc-e5f8712d8706%2Ffavicon-96x96.png?1553712190613">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.glitch.com/9c389208-b279-4e96-bcbc-e5f8712d8706%2Ffavicon-16x16.png?1553712190383">
+    <!-- Add favicons -->
+   <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.glitch.com/9c389208-b279-4e96-bcbc-e5f8712d8706%2Ffavicon-32x32.png?1553712190412">
+   <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.glitch.com/9c389208-b279-4e96-bcbc-e5f8712d8706%2Ffavicon-96x96.png?1553712190613">
+   <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.glitch.com/9c389208-b279-4e96-bcbc-e5f8712d8706%2Ffavicon-16x16.png?1553712190383">
   </head>
   <body class="mdc-typography">    
     <aside class="theme-builder-drawer mdc-drawer">
@@ -40,7 +40,7 @@
           </svg>
           Material Theme Builder
         </h1>
-        <h2 class="theme-name mdc-typography--headline5" contenteditable placeholder="Enter theme name..."></h2>
+        <h2 class="theme-name mdc-typography--headline5" placeholder="Theme name..."></h2>
         <a class="glitch-url mdc-typography--overline" href="https://glitch.com/~purple-tuba">glitch.com/~purple-tuba</a>
         <!-- <a class="glitch-url mdc-typography--overline" href="https://glitch.com/~<%= htmlWebpackPlugin.options.domain %>">glitch.com/~<%= htmlWebpackPlugin.options.domain %></h6> -->
       </div>
@@ -80,7 +80,7 @@
           Build your own custom Material Theme by remixing and styling these themeable components.
         </p>
         <p class="mdc-typography--body2">
-          Modify the variables in your project's <code>my-theme.scss</code> file to see your custom styles cascade through
+          Modify the variables in your project's <code>my-theme.scss</code> and <code>my-theme.js</code> files to see your custom styles cascade through
           <a href="https://github.com/material-components/material-components-web">Material Components for the web</a>.
         </p>
 
@@ -238,7 +238,7 @@
         <div class="mdc-top-app-bar__row">
           <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
             <a href="#" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
-            <span class="mdc-top-app-bar__title theme-builder-title">
+            <span class="mdc-top-app-bar__title">
               <h1 class="theme-builder-title mdc-typography--headline5">
                 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <defs>
@@ -268,7 +268,7 @@
         </div>
       </header>
 
-      <main class="main-content">
+      <main class="main-content mdc-top-app-bar--fixed-adjust">
         <div class="column">
           <!-- Button -->
           <section class="component-section">
@@ -321,7 +321,7 @@
             <section class="component-section">
               <div class="section-header">
                 <a href="https://material.io/design/components/app-bars-top.html" class="mdc-typography--button" target="_blank">
-                  Short Top App Bar
+                  Short App Bar
                   <i class="material-icons">open_in_new</i>
                 </a>
               </div>
@@ -612,12 +612,7 @@
 
             <!-- Select -->
             <section class="component-section">
-              <div class="section-header">
-                <a href="https://material.io/develop/web/components/input-controls/select-menus/" class="mdc-typography--button" target="_blank">
-                  Outlined Select
-                  <i class="material-icons">open_in_new</i>
-                </a>
-              </div>
+              <div class="section-header"><!-- Hold space for layout --></div>
               <div class="component-wrapper">
                 <div class="mdc-select mdc-select--outlined">
                   <input type="hidden" name="enhanced-select">
@@ -658,31 +653,31 @@
               </a>
             </div>
             <div class="component-wrapper">
-                <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list">
-                  <li class="mdc-list-item" tabindex="0">
-                    <span class="mdc-list-item__graphic material-icons" aria-hidden="true">folder</span>
-                    <span class="mdc-list-item__text">
-                      <span class="mdc-list-item__primary-text">Subtitle 1</span>
-                      <span class="mdc-list-item__secondary-text">Body 2</span>
-                    </span>
-                  </li>
-                  <hr class="mdc-list-divider">
-                  <li class="mdc-list-item">
-                    <span class="mdc-list-item__graphic material-icons" aria-hidden="true">folder</span>
-                    <span class="mdc-list-item__text">
-                      <span class="mdc-list-item__primary-text">Subtitle 1</span>
-                      <span class="mdc-list-item__secondary-text">Body 2</span>
-                    </span>
-                  </li>
-                  <hr class="mdc-list-divider">
-                  <li class="mdc-list-item">
-                    <span class="mdc-list-item__graphic material-icons" aria-hidden="true">folder</span>
-                    <span class="mdc-list-item__text">
-                      <span class="mdc-list-item__primary-text">Subtitle 1</span>
-                      <span class="mdc-list-item__secondary-text">Body 2</span>
-                    </span>
-                  </li>
-                </ul>
+              <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list">
+                <li class="mdc-list-item" tabindex="0">
+                  <span class="mdc-list-item__graphic material-icons" aria-hidden="true">child_care</span>
+                  <span class="mdc-list-item__text">
+                    <span class="mdc-list-item__primary-text">Subtitle 1</span>
+                    <span class="mdc-list-item__secondary-text">Body 2</span>
+                  </span>
+                </li>
+                <hr class="mdc-list-divider">
+                <li class="mdc-list-item">
+                  <span class="mdc-list-item__graphic material-icons" aria-hidden="true">child_care</span>
+                  <span class="mdc-list-item__text">
+                    <span class="mdc-list-item__primary-text">Subtitle 1</span>
+                    <span class="mdc-list-item__secondary-text">Body 2</span>
+                  </span>
+                </li>
+                <hr class="mdc-list-divider">
+                <li class="mdc-list-item">
+                  <span class="mdc-list-item__graphic material-icons" aria-hidden="true">child_care</span>
+                  <span class="mdc-list-item__text">
+                    <span class="mdc-list-item__primary-text">Subtitle 1</span>
+                    <span class="mdc-list-item__secondary-text">Body 2</span>
+                  </span>
+                </li>
+              </ul>
             </div>
           </section>
 
@@ -906,12 +901,9 @@
               <div class="mdc-snackbar mdc-snackbar--open">
                 <div class="mdc-snackbar__surface">
                   <div class="mdc-snackbar__label"
-                      role="status"
-                      aria-live="polite">
-                    Can't send photo. Retry in 5 seconds.
-                  </div>
-                  <div class="mdc-snackbar__actions">
-                    <button type="button" class="mdc-button mdc-snackbar__action">Retry</button>
+                    role="status"
+                    aria-live="polite">
+                    Marked as favorite.
                   </div>
                 </div>
               </div>

@@ -18,6 +18,9 @@ import {MDCTextField} from '@material/textfield';
 import {MDCTextFieldHelperText} from '@material/textfield/helper-text';
 import {MDCTopAppBar} from '@material/top-app-bar';
 
+// Import my theme variables
+import themeName from './my-theme';
+
 //
 // Instantiate all components in the main content
 //
@@ -123,10 +126,12 @@ const tabBarEl = mainEl.querySelector('.mdc-tab-bar');
 new MDCTabBar(tabBarEl);
 
 //
-// Theme Builder drawer
+// Theme Builder drawer contents
 //
 
 const themeBuilderDrawerEl = document.querySelector('.theme-builder-drawer');
+
+themeBuilderDrawerEl.querySelector('.theme-name').textContent = themeName;
 
 new MDCTabBar(themeBuilderDrawerEl.querySelector('.mdc-tab-bar'));
 themeBuilderDrawerEl.querySelector('.drawer-tab--instructions').addEventListener('MDCTab:interacted', () => {
@@ -161,6 +166,12 @@ rtlInput.addEventListener('change', function() {
 //
 
 const themeBuilderAppBar = new MDCTopAppBar(document.querySelector('.theme-builder-app-bar'));
+
+//
+// Handle responsive layout
+//
+
+const themeBuilderDrawer = null;
 const initModalDrawer = () => {
   themeBuilderDrawerEl.classList.add("mdc-drawer--modal");
   const themeBuilderDrawer = new MDCDrawer(themeBuilderDrawerEl);
@@ -170,14 +181,23 @@ const initModalDrawer = () => {
     themeBuilderDrawer.open = !themeBuilderDrawer.open;
   });
 }
-
-// Toggle between permanent drawer and modal drawer at 900px
-const setDrawerVariant = () => {
-  if (window.matchMedia("(max-width: 900px)").matches) {
-    initModalDrawer();
-  } else {
-    themeBuilderDrawerEl.classList.remove("mdc-drawer--modal");
+const destroyModalDrawer = () => {
+  themeBuilderDrawerEl.classList.remove("mdc-drawer--modal");
+  if (themeBuilderDrawer) {
+    themeBuilderDrawer.destroy();
   }
 }
-window.addEventListener('resize', setDrawerVariant);
-setDrawerVariant();
+
+// Toggle between permanent drawer and modal drawer at 1310px
+const layoutForScreenSize = () => {
+  if (window.matchMedia("(max-width: 1310px)").matches) {
+    initModalDrawer();
+    mainEl.classList.add('mdc-top-app-bar--fixed-adjust');
+  } else {
+    destroyModalDrawer();
+    mainEl.classList.remove('mdc-top-app-bar--fixed-adjust');
+  }
+}
+
+window.addEventListener('resize', layoutForScreenSize);
+layoutForScreenSize();
