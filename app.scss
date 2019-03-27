@@ -312,10 +312,16 @@ body {
 
 // Extra padding for printing as stickers
 
-.print-as-stickers .component-wrapper {
-  margin-bottom: 60px;
+.print {
+  .column {
+    width: 30vw;
+  }
 
-  &.text-field-component-wrapper, &.chips-component-wrapper {
-    margin-bottom: 96px;
+  .component-wrapper {
+    margin-bottom: 60px;
+  
+    &.text-field-component-wrapper, &.chips-component-wrapper {
+      margin-bottom: 96px;
+    }
   }
 }
