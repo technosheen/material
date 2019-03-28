@@ -46,7 +46,16 @@ cardPrimaryActionEls.forEach((el) => new MDCRipple(el));
 
 // Chips
 const chipSetEls = Array.from(mainEl.querySelectorAll('.mdc-chip-set'));
-chipSetEls.forEach((el) => new MDCChipSet(el));
+chipSetEls.forEach((el) => {
+  let chipSet = new MDCChipSet(el);
+  console.log();
+  chipSet.foundation_.adapter_.selectSelected = (chipId, selected) => {
+    const index = this.findChipIndex_(chipId);
+    if (index >= 0 && this.chips[index].selected != selected) {
+      this.chips[index].selected = selected;
+    }
+  };
+});
 
 // Text field
 const textFieldEls = Array.from(mainEl.querySelectorAll('.mdc-text-field'));
