@@ -12,6 +12,7 @@ body {
 // Theme Builder drawer content
 
 .theme-builder-drawer {
+  @include mdc-drawer-shape-radius(0);
   width: 400px;
   height: auto;
 
@@ -310,7 +311,7 @@ body {
   margin: 16px 0;
 }
 
-// Extra padding for printing as stickers
+// Extra padding for printing
 
 .print {
   .column {
