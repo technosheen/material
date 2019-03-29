@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- import Material Icons from Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <!-- import the Material stylesheet -->
     <link rel="stylesheet" href="bundle.css">
     <!-- Add favicons -->
@@ -42,8 +41,8 @@
           Material Theme Builder
         </h1>
         <h2 class="theme-name mdc-typography--headline5" placeholder="Theme name..."></h2>
-<!--         <a class="glitch-url mdc-typography--overline" href="https://glitch.com/~purple-tuba">glitch.com/~purple-tuba</a> -->
-        <a class="glitch-url mdc-typography--overline" href="https://glitch.com/~<%= htmlWebpackPlugin.options.domain %>">glitch.com/~<%= htmlWebpackPlugin.options.domain %></a>
+        <a class="glitch-url mdc-typography--overline" href="https://glitch.com/~purple-tuba">glitch.com/~purple-tuba</a>
+        <!-- <a class="glitch-url mdc-typography--overline" href="https://glitch.com/~<%= htmlWebpackPlugin.options.domain %>">glitch.com/~<%= htmlWebpackPlugin.options.domain %></a> -->
       </div>
       <hr class="mdc-list-divider theme-builder-drawer-divider">
       
@@ -637,16 +636,16 @@
                   <input type="hidden" name="enhanced-select">
                   <i class="mdc-select__dropdown-icon"></i>
                   <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
+                  <div class="mdc-select__menu mdc-menu mdc-menu-surface" role="listbox">
                     <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true"></li>
-                      <li class="mdc-list-item" data-value="item1">
+                      <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true" role="option"></li>
+                      <li class="mdc-list-item" data-value="item1" role="option">
                         Body 2
                       </li>
-                      <li class="mdc-list-item" data-value="item2">
+                      <li class="mdc-list-item" data-value="item2" role="option">
                         Body 2
                       </li>
-                      <li class="mdc-list-item" data-value="item3">
+                      <li class="mdc-list-item" data-value="item3" role="option">
                         Body 2
                       </li>
                     </ul>
@@ -662,19 +661,19 @@
               <div class="section-header"><!-- Hold space for layout --></div>
               <div class="component-wrapper">
                 <div class="mdc-select mdc-select--outlined">
-                  <input type="hidden" name="enhanced-select">
+                  <input type="hidden" name="enhanced-outlined-select">
                   <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text" role="button" aria-haspopup="listbox" aria-labelledby="demo-label demo-selected-text">Body 2</div>
+                  <div class="mdc-select__selected-text" role="button" aria-haspopup="listbox">Body 2</div>
                   <div class="mdc-select__menu mdc-menu mdc-menu-surface" role="listbox">
                     <ul class="mdc-list">
-                      <li class="mdc-list-item" data-value=""></li>
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="item1" role="option">
+                      <li class="mdc-list-item" data-value="" role="option"></li>
+                      <li class="mdc-list-item mdc-list-item--selected" data-value="outlined-item1" role="option">
                         Body 2
                       </li>
-                      <li class="mdc-list-item" data-value="item2" aria-selected="true" aria-disabled="true" role="option">
+                      <li class="mdc-list-item" data-value="outlined-item2" aria-selected="true" role="option">
                         Body 2
                       </li>
-                      <li class="mdc-list-item" data-value="item3" role="option">
+                      <li class="mdc-list-item" data-value="outlined-item3" role="option">
                         Body 2
                       </li>
                     </ul>

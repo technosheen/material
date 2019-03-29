@@ -120,6 +120,8 @@ const menu = new MDCMenu(menuEl);
 menu.open = true;
 // Override MDCMenuSurfaceFoundation so the menu never closes
 menu.menuSurface_.foundation_.close = () => {};
+// Focus first component when menu is done opening
+menuEl.addEventListener('MDCMenuSurface:opened', () => document.querySelector('.mdc-button').focus());
 
 // Tabs
 const tabBarEl = mainEl.querySelector('.mdc-tab-bar');
