@@ -133,22 +133,33 @@ new MDCTabBar(tabBarEl);
 
 const themeBuilderDrawerEl = document.querySelector('.theme-builder-drawer');
 
+// Theme name
 themeBuilderDrawerEl.querySelector('.theme-name').textContent = themeName;
 
+// Glitch URL
+const glitchUrl = themeBuilderDrawerEl.querySelector('.glitch-url');
+if (PROJECT_DOMAIN) {
+  glitchUrl.textContent = 'glitch.com/~' + PROJECT_DOMAIN;
+  glitchUrl.href = 'https://glitch.com/~' + PROJECT_DOMAIN;
+}
+
+// Theme Builder drawer tabs
 new MDCTabBar(themeBuilderDrawerEl.querySelector('.mdc-tab-bar'));
+const instructions = themeBuilderDrawerEl.querySelector('.drawer-content--instructions');
+const themeSummary = themeBuilderDrawerEl.querySelector('.drawer-content--theme-summary');
 themeBuilderDrawerEl.querySelector('.drawer-tab--instructions').addEventListener('MDCTab:interacted', () => {
-  themeBuilderDrawerEl.querySelector('.drawer-content--instructions').style.display = 'block';
-  themeBuilderDrawerEl.querySelector('.drawer-content--theme-summary').style.display = 'none';
+  instructions.style.display = 'block';
+  themeSummary.style.display = 'none';
 });
 themeBuilderDrawerEl.querySelector('.drawer-tab--theme-summary').addEventListener('MDCTab:interacted', () => {
-  themeBuilderDrawerEl.querySelector('.drawer-content--instructions').style.display = 'none';
-  themeBuilderDrawerEl.querySelector('.drawer-content--theme-summary').style.display = 'block';
+  instructions.style.display = 'none';
+  themeSummary.style.display = 'block';
 });
 
+// RTL Switch
 const formField = new MDCFormField(themeBuilderDrawerEl.querySelector('.mdc-form-field'));
 const rtlSwitch = new MDCSwitch(themeBuilderDrawerEl.querySelector('.rtl-switch'));
 formField.input = rtlSwitch;
-
 const rtlInput = themeBuilderDrawerEl.querySelector('#rtl-input');
 rtlInput.addEventListener('change', function() {
   [].forEach.call(mainEl.querySelectorAll('.column'), function(columnEl) {
