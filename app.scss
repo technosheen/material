@@ -205,14 +205,14 @@ body {
   .theme-summary-color--on-error {
     background: $mdc-theme-on-error;
   }
-  .theme-summary-color--background {
-    background: $mdc-theme-background;
-  }
   .theme-summary-color--surface {
     background: $mdc-theme-surface;
   }
   .theme-summary-color--on-surface {
     background: $mdc-theme-on-surface;
+  }
+  .theme-summary-color--background {
+    background: $mdc-theme-background;
   }
 
   // Application of shape
