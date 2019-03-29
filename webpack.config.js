@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = [{
   entry: ['./app.scss', './app.js'],
@@ -6,8 +6,9 @@ module.exports = [{
     filename: 'bundle.js',
   },
   plugins: [
-    new webpack.DefinePlugin({
-      PROJECT_DOMAIN: JSON.stringify(process.env.PROJECT_DOMAIN)
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      domain: process.env.PROJECT_DOMAIN
     })
   ],
   module: {

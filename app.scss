@@ -12,6 +12,7 @@ body {
 // Theme Builder drawer content
 
 .theme-builder-drawer {
+  @include mdc-drawer-surface-fill-color(white);
   @include mdc-drawer-shape-radius(0);
   width: 400px;
   height: auto;
@@ -269,6 +270,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background: $mdc-theme-background; 
 
   &:not(.mdc-top-app-bar--fixed-adjust) {
     padding: 2vh 0;
