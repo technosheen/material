@@ -290,8 +290,12 @@ body {
 
 .component-section {
   margin: 16px 20px 40px 20px;
+
+  &.dialog-component-section {
+    margin-bottom: 60px; // To avoid overshadowing Image List
+  }
 }
-  
+
 .section-header {
   display: flex;
   height: 36px;

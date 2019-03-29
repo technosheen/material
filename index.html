@@ -41,8 +41,8 @@
           Material Theme Builder
         </h1>
         <h2 class="theme-name mdc-typography--headline5" placeholder="Theme name..."></h2>
-<!--         <a class="glitch-url mdc-typography--overline" href="https://glitch.com/~purple-tuba">glitch.com/~purple-tuba</a> -->
-        <a class="glitch-url mdc-typography--overline" href="https://glitch.com/~<%= htmlWebpackPlugin.options.domain %>">glitch.com/~<%= htmlWebpackPlugin.options.domain %></a>
+        <a class="glitch-url mdc-typography--overline" href="https://glitch.com/~purple-tuba">glitch.com/~purple-tuba</a>
+        <!-- <a class="glitch-url mdc-typography--overline" href="https://glitch.com/~<%= htmlWebpackPlugin.options.domain %>">glitch.com/~<%= htmlWebpackPlugin.options.domain %></a> -->
       </div>
       <hr class="mdc-list-divider theme-builder-drawer-divider">
       
@@ -319,6 +319,49 @@
             </div>
           </section>
 
+          <!-- Drawer -->
+          <section class="component-section">
+            <div class="section-header">
+              <a href="https://material.io/design/components/navigation-drawer.html" class="mdc-typography--button" target="_blank">
+                Drawer
+                <i class="material-icons">open_in_new</i>
+              </a>
+            </div>
+            <div class="component-wrapper drawer-component-wrapper">
+              <aside class="mdc-drawer">
+                <div class="mdc-drawer__header">
+                  <h3 class="mdc-drawer__title">Headline 6</h3>
+                  <h6 class="mdc-drawer__subtitle">Body 2</h6>
+                </div>
+                <hr class="mdc-list-divider">
+                <div class="mdc-drawer__content">
+                  <nav class="mdc-list" role="listbox">
+                    <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true" >
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                      <span class="mdc-list-item__text">Body 2</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>
+                      <span class="mdc-list-item__text">Body 2</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
+                      <span class="mdc-list-item__text">Body 2</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                      <span class="mdc-list-item__text">Body 2</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                      <span class="mdc-list-item__text">Body 2</span>
+                    </a>
+                  </nav>
+                </div>
+              </aside>
+            </div>
+          </section>
+
           <div class="component-section-row">
             <!-- Short top app bar -->
             <section class="component-section">
@@ -351,24 +394,24 @@
                 </a>
               </div>
               <div class="component-wrapper">
-                  <div class="mdc-menu-surface--anchor">
-                    <div class="mdc-menu mdc-menu-surface mdc-menu-surface--open" tabindex="-1">
-                      <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                        <li class="mdc-list-item" role="menuitem">
-                          <span class="mdc-list-item__text">Body 2</span>
-                        </li>
-                        <li class="mdc-list-item" role="menuitem">
-                          <span class="mdc-list-item__text">Body 2</span>
-                        </li>
-                        <li class="mdc-list-item" role="menuitem">
-                          <span class="mdc-list-item__text">Body 2</span>
-                        </li>
-                        <li class="mdc-list-item" role="menuitem">
-                          <span class="mdc-list-item__text">Body 2</span>
-                        </li>
-                      </ul>
-                    </div>
+                <div class="mdc-menu-surface--anchor">
+                  <div class="mdc-menu mdc-menu-surface mdc-menu-surface--open" tabindex="-1">
+                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text">Body 2</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text">Body 2</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text">Body 2</span>
+                      </li>
+                      <li class="mdc-list-item" role="menuitem">
+                        <span class="mdc-list-item__text">Body 2</span>
+                      </li>
+                    </ul>
                   </div>
+                </div>
               </div>
             </section>
           </div>
@@ -683,49 +726,6 @@
               </ul>
             </div>
           </section>
-
-          <!-- Drawer -->
-          <section class="component-section">
-            <div class="section-header">
-              <a href="https://material.io/design/components/navigation-drawer.html" class="mdc-typography--button" target="_blank">
-                Drawer
-                <i class="material-icons">open_in_new</i>
-              </a>
-            </div>
-            <div class="component-wrapper drawer-component-wrapper">
-              <aside class="mdc-drawer">
-                <div class="mdc-drawer__header">
-                  <h3 class="mdc-drawer__title">Headline 6</h3>
-                  <h6 class="mdc-drawer__subtitle">Body 2</h6>
-                </div>
-                <hr class="mdc-list-divider">
-                <div class="mdc-drawer__content">
-                  <nav class="mdc-list" role="listbox">
-                    <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true" >
-                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
-                      <span class="mdc-list-item__text">Body 2</span>
-                    </a>
-                    <a class="mdc-list-item" href="#">
-                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>
-                      <span class="mdc-list-item__text">Body 2</span>
-                    </a>
-                    <a class="mdc-list-item" href="#">
-                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
-                      <span class="mdc-list-item__text">Body 2</span>
-                    </a>
-                    <a class="mdc-list-item" href="#">
-                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-                      <span class="mdc-list-item__text">Body 2</span>
-                    </a>
-                    <a class="mdc-list-item" href="#">
-                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-                      <span class="mdc-list-item__text">Body 2</span>
-                    </a>
-                  </nav>
-                </div>
-              </aside>
-            </div>
-          </section>
     
         </div>
         <div class="column">
@@ -914,7 +914,7 @@
           </section>
 
           <!-- Dialog -->
-          <section class="component-section">
+          <section class="component-section dialog-component-section">
             <div class="section-header">
               <a href="https://material.io/design/components/dialogs.html" class="mdc-typography--button" target="_blank">
                 Dialog
