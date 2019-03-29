@@ -167,6 +167,7 @@
 
 .component-wrapper > .mdc-list {
   border: 1px solid rgba(0,0,0,.1);
+  background: $mdc-theme-surface;
 
   .mdc-list-item__graphic {
     background-color: rgba(0, 0, 0, 0.12);
