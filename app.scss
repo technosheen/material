@@ -199,6 +199,12 @@ body {
   .theme-summary-color--on-secondary {
     background: $mdc-theme-on-secondary;
   }
+  .theme-summary-color--error {
+    background: $mdc-theme-error;
+  }
+  .theme-summary-color--on-error {
+    background: $mdc-theme-on-error;
+  }
   .theme-summary-color--background {
     background: $mdc-theme-background;
   }
