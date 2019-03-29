@@ -1,4 +1,4 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = [{
   entry: ['./app.js'],
@@ -6,32 +6,31 @@ module.exports = [{
     filename: 'bundle.js',
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './index.html',
-      domain: process.env.PROJECT_DOMAIN
+    new webpack.DefinePlugin({
+      PROJECT_DOMAIN: JSON.stringify(process.env.PROJECT_DOMAIN)
     })
   ],
   module: {
     rules: [
-      // {
-      //   test: /\.scss$/,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         name: 'bundle.css',
-      //       },
-      //     },
-      //     { loader: 'extract-loader' },
-      //     { loader: 'css-loader' },
-      //     {
-      //       loader: 'sass-loader',
-      //       options: {
-      //         includePaths: ['./node_modules']
-      //       }
-      //     }
-      //   ]
-      // },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'bundle.css',
+            },
+          },
+          { loader: 'extract-loader' },
+          { loader: 'css-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: ['./node_modules']
+            }
+          }
+        ]
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',
