@@ -136,13 +136,6 @@ const themeBuilderDrawerEl = document.querySelector('.theme-builder-drawer');
 // Theme name
 themeBuilderDrawerEl.querySelector('.theme-name').textContent = themeName;
 
-// Glitch URL
-const glitchUrl = themeBuilderDrawerEl.querySelector('.glitch-url');
-if (PROJECT_DOMAIN) {
-  glitchUrl.textContent = 'glitch.com/~' + PROJECT_DOMAIN;
-  glitchUrl.href = 'https://glitch.com/~' + PROJECT_DOMAIN;
-}
-
 // Theme Builder drawer tabs
 new MDCTabBar(themeBuilderDrawerEl.querySelector('.mdc-tab-bar'));
 const instructions = themeBuilderDrawerEl.querySelector('.drawer-content--instructions');
