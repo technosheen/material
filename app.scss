@@ -38,7 +38,11 @@ body {
     color: rgba(0, 0, 0, .6);
     margin: 0;
   }
-
+  p {
+    margin-block-start: 0.5em;
+    margin-block-end: 1.25em;
+  }
+  
   a {
     @include mdc-theme-prop(color, $mdc-theme-primary);
     text-decoration: none;
