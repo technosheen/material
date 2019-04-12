@@ -1,22 +1,24 @@
-import {MDCCheckbox} from '@material/checkbox';
-import {MDCChipSet} from '@material/chips';
-import {MDCDialog} from '@material/dialog';
-import {MDCDrawer} from '@material/drawer';
-import {MDCFormField} from '@material/form-field';
-import {MDCIconButtonToggle} from '@material/icon-button';
-import {MDCLinearProgress} from '@material/linear-progress';
-import {MDCList} from '@material/list';
-import {MDCMenu} from '@material/menu';
-import {MDCRadio} from '@material/radio';
-import {MDCRipple} from '@material/ripple/index';
-import {MDCSelect} from '@material/select';
-import {MDCSlider} from '@material/slider';
-import {MDCSnackbar} from '@material/snackbar';
-import {MDCSwitch} from '@material/switch';
-import {MDCTabBar} from '@material/tab-bar';
-import {MDCTextField} from '@material/textfield';
-import {MDCTextFieldHelperText} from '@material/textfield/helper-text';
-import {MDCTopAppBar} from '@material/top-app-bar';
+import {
+  MDCCheckbox,
+  MDCChipSet,
+  MDCDialog,
+  MDCDrawer,
+  MDCFormField,
+  MDCIconButtonToggle,
+  MDCLinearProgress,
+  MDCList,
+  MDCMenu,
+  MDCRadio,
+  MDCRipple,
+  MDCSelect,
+  MDCSlider,
+  MDCSnackbar,
+  MDCSwitch,
+  MDCTabBar,
+  MDCTextField,
+  MDCTextFieldHelperText,
+  MDCTopAppBar
+} from './components';
 
 // Import my theme variables
 import themeName from './my-theme';
