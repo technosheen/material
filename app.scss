@@ -190,56 +190,29 @@ body {
   .theme-summary-color--primary {
     background: $mdc-theme-primary;
   }
-  .theme-summary-code--primary:after {
-    content: ': #{$mdc-theme-primary}';
-  }
   .theme-summary-color--on-primary {
     background: $mdc-theme-on-primary;
-  }
-  .theme-summary-code--on-primary:after {
-    content: ': #{$mdc-theme-on-primary}';
   }
   .theme-summary-color--secondary {
     background: $mdc-theme-secondary;
   }
-  .theme-summary-code--secondary:after {
-    content: ': #{$mdc-theme-secondary}';
-  }
   .theme-summary-color--on-secondary {
     background: $mdc-theme-on-secondary;
-  }
-  .theme-summary-code--on-secondary:after {
-    content: ': #{$mdc-theme-on-secondary}';
   }
   .theme-summary-color--error {
     background: $mdc-theme-error;
   }
-  .theme-summary-code--error:after {
-    content: ': #{$mdc-theme-error}';
-  }
   .theme-summary-color--on-error {
     background: $mdc-theme-on-error;
-  }
-  .theme-summary-code--on-error:after {
-    content: ': #{$mdc-theme-on-error}';
   }
   .theme-summary-color--surface {
     background: $mdc-theme-surface;
   }
-  .theme-summary-code--surface:after {
-    content: ': #{$mdc-theme-surface}';
-  }
   .theme-summary-color--on-surface {
     background: $mdc-theme-on-surface;
   }
-  .theme-summary-code--on-surface:after {
-    content: ': #{$mdc-theme-on-surface}';
-  }
   .theme-summary-color--background {
     background: $mdc-theme-background;
-  }
-  .theme-summary-code--background:after {
-    content: ': #{$mdc-theme-background}';
   }
 
   // Application of shape
