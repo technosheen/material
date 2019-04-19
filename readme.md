@@ -1,4 +1,4 @@
-# Material Theme Builder
+# Build a Material Theme
 
 Description
 
