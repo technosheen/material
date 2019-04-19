@@ -3,16 +3,15 @@
 
 // Material Theming
 // Define the theme variables before importing any MDC Web components
-// $mdc-theme-primary: #303f9f;
-// $mdc-theme-secondary: #ec407a;
 
-// $mdc-typography-font-family: unquote("Cabin, sans-serif");
-// $mdc-typography-styles-button: (
-//  font-size: 14px,
-//  font-weight: 500,
-//  letter-spacing: 0.05em,
-// );
+// @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600');
+// $mdc-typography-font-family: unquote("Raleway, sans-serif");
 
-// $mdc-shape-small-component-radius: 12px;
-// $mdc-shape-medium-component-radius: 0px;
+// $mdc-shape-small-component-radius: 4px;
+// $mdc-shape-medium-component-radius: 16px;
 // $mdc-shape-large-component-radius: 20px;
+
+// $mdc-theme-primary: #5D1049;
+// $mdc-theme-secondary: #E30425;
+// $mdc-theme-background: #F4E2ED;
+// $mdc-theme-error: #FD9725;
