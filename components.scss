@@ -69,6 +69,7 @@
 
 .mdc-card {
   width: 100%;
+  color: $mdc-theme-on-surface;
 
   .demo-card__primary {
     padding: 1rem;
@@ -80,8 +81,6 @@
   }
 
   .demo-card__secondary {
-    @include mdc-theme-prop(color, text-secondary-on-background);
-
     padding: 0 1rem 8px;
   }
 }
