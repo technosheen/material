@@ -15,7 +15,7 @@
    <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.glitch.com/9c389208-b279-4e96-bcbc-e5f8712d8706%2Ffavicon-96x96.png?1553712190613">
    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.glitch.com/9c389208-b279-4e96-bcbc-e5f8712d8706%2Ffavicon-16x16.png?1553712190383">
   </head>
-  <body class="mdc-typography">
+  <body class="mdc-typography print">
     <aside class="theme-builder-drawer mdc-drawer">
       <div class="mdc-drawer__header">
         <h1 class="theme-builder-title mdc-typography--headline5">
@@ -87,10 +87,10 @@
       <div class="mdc-drawer__content drawer-content--instructions">
         <h6 class="mdc-typography--overline">How to build a theme</h6>
         <p class="mdc-typography--body2">
-          Build a custom Material Theme by remixing and styling these themeable components.
+          Build your own custom Material Theme by remixing and styling these themeable components.
         </p>
         <p class="mdc-typography--body2">
-          Modify the variables in this project's <code>my-theme.scss</code>, <code>my-mixins.scss</code>, and <code>my-theme.js</code> files to see custom styles cascade through
+          Modify the variables in your project's <code>my-theme.scss</code>, <code>my-mixins.scss</code>, and <code>my-theme.js</code> files to see your custom styles cascade through
           <a href="https://github.com/material-components/material-components-web">Material Components for the web</a>.
         </p>
 
@@ -110,7 +110,7 @@
 
       <div class="mdc-drawer__content drawer-content--theme-summary">
         <div class="section-header">
-          <a href="https://material.io/design/color/#tools-for-picking-colors" class="mdc-typography--overline" target="_blank">
+          <a href="https://material.io/design/color/the-color-system.html" class="mdc-typography--overline" target="_blank">
             <i class="material-icons leading-icon">colorize</i>
             Color Scheme
             <i class="material-icons">open_in_new</i>
@@ -155,22 +155,22 @@
         <hr class="mdc-list-divider theme-summary-divider">
 
         <div class="section-header">
-          <a href="https://material.io/design/shape/about-shape.html#shape-customization-tool" class="mdc-typography--overline" target="_blank">
+          <a href="https://material.io/design/shape/about-shape.html" class="mdc-typography--overline" target="_blank">
             <i class="material-icons leading-icon">border_style</i>
             Shape System
             <i class="material-icons">open_in_new</i>
           </a>
         </div>
-        <div class="theme-summary-line">
-          <code class="theme-summary-code">$mdc-shape-small-component-radius</code>
+        <div class="theme-summary-line theme-shape">
+          <code class="theme-summary-code">$mdc-shape-small-component-radius:</code>
           <figure class="theme-summary-shape theme-summary-shape--small">S</figure>
         </div>
-        <div class="theme-summary-line">
-          <code class="theme-summary-code">$mdc-shape-medium-component-radius</code>
+        <div class="theme-summary-line theme-shape">
+          <code class="theme-summary-code">$mdc-shape-medium-component-radius:</code>
           <figure class="theme-summary-shape theme-summary-shape--medium">M</figure>
         </div>
-        <div class="theme-summary-line">
-          <code class="theme-summary-code">$mdc-shape-large-component-radius</code>
+        <div class="theme-summary-line theme-shape">
+          <code class="theme-summary-code">$mdc-shape-large-component-radius:</code>
           <figure class="theme-summary-shape theme-summary-shape--large">L</figure>
         </div>
         <hr class="mdc-list-divider theme-summary-divider">
@@ -181,6 +181,11 @@
             Typography Scale
             <i class="material-icons">open_in_new</i>
           </a>
+        </div>
+        <div class="typography-callout">
+          <code class="theme-summary-code">$mdc-typography--font-family:
+          <span class="font-name varValue"></span>;</code>
+          <a class="font-link mdc-typography--button">See on Google Fonts <i class="material-icons">open_in_new</i></a>
         </div>
         <div class="theme-summary-line theme-summary-line--typography">
           <code class="theme-summary-code">$mdc-typography--headline1</code>
