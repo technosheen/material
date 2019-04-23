@@ -1,415 +1,46 @@
+// Import global Material Theming variables
+@import "my-theme";
 
-// All theming and component-specific styling is applied here!
-@import "components";
+// Import styles for each MDC Web component
+@import "@material/button/mdc-button";
+@import "@material/card/mdc-card";
+@import "@material/checkbox/mdc-checkbox";
+@import "@material/chips/mdc-chips";
+@import "@material/dialog/mdc-dialog";
+@import "@material/drawer/mdc-drawer";
+@import "@material/elevation/mdc-elevation";
+@import "@material/fab/mdc-fab";
+@import "@material/form-field/mdc-form-field";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/image-list/mdc-image-list";
+@import "@material/linear-progress/mdc-linear-progress";
+@import "@material/list/mdc-list";
+@import "@material/menu/mdc-menu";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/radio/mdc-radio";
+@import "@material/ripple/mixins";
+@import "@material/rtl/mixins";
+@import "@material/select/mdc-select";
+@import "@material/shape/mixins";
+@import "@material/shape/functions";
+@import "@material/slider/mdc-slider";
+@import "@material/snackbar/mdc-snackbar";
+@import "@material/switch/mdc-switch";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
+@import "@material/textfield/mdc-text-field";
+@import "@material/textfield/helper-text/mdc-text-field-helper-text";
+@import "@material/theme/color-palette";
+@import "@material/theme/functions";
+@import "@material/theme/mixins";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/typography/mdc-typography";
 
-// The rest of this file deals with the Material Theme Builder layout
+// Apply mixins to theme individual components
+@import "my-mixins";
 
-body {
-  display: flex;
-  margin: 0;
-}
-
-// Theme Builder drawer content
-
-.theme-builder-drawer {
-  @include mdc-drawer-surface-fill-color(white);
-  @include mdc-drawer-shape-radius(0);
-  width: 400px;
-  height: auto;
-
-  &.mdc-drawer--modal {
-    height: 100%;
-  }
-
-  .mdc-drawer__header {
-    padding: 24px;
-  }
-
-  .theme-builder-drawer-divider {
-    margin: -1px;
-  }
-  
-  .mdc-drawer__content {
-    padding: 24px;
-    color: rgba(0, 0, 0, .87);
-  }
-  
-  h6 {
-    color: rgba(0, 0, 0, .6);
-    margin: 0;
-  }
-  p {
-    margin-block-start: 0.5em;
-    margin-block-end: 1.25em;
-  }
-  
-  a {
-    @include mdc-theme-prop(color, $mdc-theme-primary);
-    text-decoration: none;
-
-    &:hover, &:focus {
-      text-decoration: underline;
-      outline: none;
-    }
-  }
-  
-  code {
-    font-family: 'Roboto mono';
-    background: $material-color-grey-200;
-  }
-  
-  .mdc-form-field {
-    margin: 12px 0;
-    
-    .rtl-switch {
-      margin-right: 16px;
-    }
-  }
-}
-  
-.theme-builder-title {
-  color: $material-color-grey-800;
-  font-family: 'Roboto', sans-serif;
-  font-style: italic;
-  font-weight: 800;
-
-  svg {
-    vertical-align: -3px;
-    margin-right: 4px;
-  }
-}
-
-.drawer-content--theme-summary {
-  display: none;
-}
-
-.theme-name {
-  margin-bottom: 0;
-
-  &:focus {
-    outline: 1px solid rgba(0, 0, 0, .12);
-  }
-
-  &:empty:before {
-    content: attr(placeholder);
-    color: rgba(0, 0, 0, .6);
-  }
-}
-
-.glitch-url {
-  @include mdc-theme-prop(color, $mdc-theme-primary);
-  margin-top: 0;
-  font-size: 0.65rem;
-}
-
-// Theme Summary content
-
-.mdc-list-divider.theme-summary-divider {
-  border-bottom-width: 2px;
-  margin: 20px 0;
-}
-
-.theme-summary-line {
-  @include mdc-typography(caption);
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 8px 0;
-
-  figure {
-    margin: 0;
-  }
-
-  .theme-summary-code {
-    background: none;
-  }
-
-  .theme-summary-color {
-    width: 20px;
-    height: 20px;
-    border: 1px solid $material-color-grey-400;
-    border-radius: 50%;
-  }
-
-  .theme-summary-shape {
-    @include mdc-typography(button);
-
-    width: 48px;
-    height: 36px;
-    line-height: 36px;
-    text-align: center;
-    background: $material-color-grey-100;
-    border: 1px solid $material-color-grey-600;
-  }
-  
-  &.theme-summary-line--typography {
-    margin: 0;
-  }
-
-  .theme-summary-typography {
-    width: 120px;
-
-    // Draw typography baselines
-    &.mdc-typography--headline1 {
-      $line-height: 6rem;
-      @include mdc-typography-baseline-top($line-height);
-      @include mdc-typography-baseline-bottom($line-height);
-    }
-    &.mdc-typography--headline2 {
-      $line-height: 3.75rem;
-      @include mdc-typography-baseline-top($line-height);
-      @include mdc-typography-baseline-bottom($line-height);
-    }
-    &.mdc-typography--headline3 {
-      $line-height: 3.125rem;
-      @include mdc-typography-baseline-top($line-height);
-      @include mdc-typography-baseline-bottom($line-height);
-    }
-    &.mdc-typography--headline4 {
-      $line-height: 2.5rem;
-      @include mdc-typography-baseline-top($line-height);
-      @include mdc-typography-baseline-bottom($line-height);
-    }
-    &.mdc-typography--headline5 {
-      $line-height: 2rem;
-      @include mdc-typography-baseline-top($line-height);
-      @include mdc-typography-baseline-bottom($line-height);
-    }
-    &.mdc-typography--headline6,
-    &.mdc-typography--subtitle1,
-    &.mdc-typography--subtitle2,
-    &.mdc-typography--body1,
-    &.mdc-typography--body2,
-    &.mdc-typography--caption,
-    &.mdc-typography--button,
-    &.mdc-typography--overline {
-      $line-height: 2rem;
-      @include mdc-typography-baseline-top($line-height);
-      @include mdc-typography-baseline-bottom($line-height);
-    }
-  }
-
-  // Application of color
-  .theme-summary-color--primary {
-    background: $mdc-theme-primary;
-  }
-  .theme-summary-color--on-primary {
-    background: $mdc-theme-on-primary;
-  }
-  .theme-summary-color--secondary {
-    background: $mdc-theme-secondary;
-  }
-  .theme-summary-color--on-secondary {
-    background: $mdc-theme-on-secondary;
-  }
-  .theme-summary-color--error {
-    background: $mdc-theme-error;
-  }
-  .theme-summary-color--on-error {
-    background: $mdc-theme-on-error;
-  }
-  .theme-summary-color--surface {
-    background: $mdc-theme-surface;
-  }
-  .theme-summary-color--on-surface {
-    background: $mdc-theme-on-surface;
-  }
-  .theme-summary-color--background {
-    background: $mdc-theme-background;
-  }
-
-  // Application of shape
-  .theme-summary-shape--small {
-    @include mdc-shape-radius($mdc-shape-small-component-radius);
-  }
-  .theme-summary-shape--medium {
-    @include mdc-shape-radius($mdc-shape-medium-component-radius);
-  }
-  .theme-summary-shape--large {
-    @include mdc-shape-radius($mdc-shape-large-component-radius);
-  }
-}
-
-.mdc-list-divider.typography-baseline-divider {
-  margin-top: 0;
-  margin-bottom: 12px;
-  border-bottom-color: $material-color-grey-200;
-}
-
-// Theme Builder app bar
-
-.theme-builder-app-bar {
-  display: none; // hide on >1310px screens
-  position: fixed;
-
-  @include mdc-top-app-bar-fill-color(white);
-  @include mdc-top-app-bar-icon-ink-color($material-color-grey-800);
-  @include mdc-elevation(1);
-
-  .mdc-top-app-bar__title {
-    width: 100%;
-    text-align: center;
-    padding: 0;
-  }
-}
-
-.mdc-drawer-app-content {
-  width: 100%;
-}
-
-.theme-builder-desc-banner {
-  display: none; // hide on >1310px screens
-  width: 100%;
-  text-align: center;
-  background: $material-color-grey-100;
-  color: rgba(0, 0, 0, .87);
-  padding: 10px 0;
-}
-
-// Breakpoint <1310px
-@media (max-width: 1310px) {
-  .theme-builder-app-bar, .theme-builder-desc-banner {
-    display: block;
-  }
-}
-
-// Main content layout
-
-.main-content {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  background: $mdc-theme-background; 
-
-  &:not(.mdc-top-app-bar--fixed-adjust) {
-    padding: 2vh 0;
-  }
-  
-  .column {
-    width: 420px;
-  }
-}
-
-.component-section-row {
-  display: flex;
-
-  .component-section:first-child {
-    width: 200px;
-  }
-}
-
-.component-section {
-  margin: 16px 20px 40px 20px;
-
-  &.dialog-component-section {
-    margin-bottom: 60px; // To avoid overshadowing Image List
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .component-section {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .mdc-image-list {
-    width: auto;
-  }
-  
-  .mdc-drawer {
-    width: 60%;
-  }
-  
-  .column {
-    width: auto;
-    max-width: 420px;
-    padding-right: 8px;
-    padding-left: 8px;
-  } 
-}
-
-@media only screen and (max-width: 485px) {
-  .column {
-    overflow: hidden;
-  }
-  
-   .mdc-dialog .mdc-dialog__surface {
-    max-width: calc(100% - 100px);
-  }
-}
-  
-.section-header {
-  display: flex;
-  height: 36px;
-  
-  a {
-    display: flex;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.54);
-  
-    &:hover, &:focus {
-      color: rgba(0, 0, 0, 0.87);
-      text-decoration: none;
-    }
-  }
-  
-  .material-icons {
-    font-size: 1rem;
-    padding: 8px;
-
-    &.leading-icon {
-      padding-left: 0;
-    }
-  }
-}
-
-.component-wrapper {
-  margin: 16px 0;
-}
-
-// Extra padding for printing
-
-.print {
-  .column {
-    width: 30vw;
-  }
-
-  .component-wrapper {
-    margin-bottom: 60px;
-  
-    &.text-field-component-wrapper, &.chips-component-wrapper {
-      margin-bottom: 96px;
-    }
-  }
-}
-
-// Theme Summary Typography
-.typography-callout {
-  font-size: 12px;
-  padding: 16px;
-  border: 1px solid $material-color-grey-300;
-  background-color: $material-color-grey-200;
-}
-
-.font-link {
-  font-size: 12px;
-  margin-top: 8px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-bottom: -16px;
-}
-
-.font-link i {
-  font-size: 16px;
-  margin-left: 8px;
-}
-
-.theme-shape .varValue {
-  display: block;
-}
-
-.varValue {
-  font-weight: 600;
-}
+// Import site-specific CSS files
+@import "my-layout";
+@import "my-components";
