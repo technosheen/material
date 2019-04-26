@@ -315,6 +315,7 @@ body {
   
   .mdc-drawer {
     width: 60%;
+    min-width: calc(100% - 56px);
   }
   
   .column {
