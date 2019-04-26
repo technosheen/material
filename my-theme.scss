@@ -1,14 +1,23 @@
 // Imports Roboto 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
-// Typography
-// To change your theme's typography, we recommend importing a font from Google Fonts https://fonts.google.com/
-// Set the global font-family 
+/*  Typography */
+// To change your theme's typography, we recommend importing a font from Google Fonts and setting the global font-family https://fonts.google.com
+
 // @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 // $mdc-typography-font-family: unquote("Roboto, sans-serif");
 
 
-// Primary colors ($mdc-theme-primary) map to components and elements, and secondary colors  ($mdc-theme-secondary) are used as accents on components. Replace these
+/* Shape */
+// To systematically apply shape throughout your app, components are categorized by size, grouped into categories of small, medium and large. Each component size group can be themed by overriding the default values. We recommend using our shape customization tool to help you pick your radius values. (Note: Material Components for Web only supports rounded corners) https://material.io/design/shape/about-shape.html#shape-customization-tool
+
+// $mdc-shape-small-component-radius: 4px;
+// $mdc-shape-medium-component-radius: 4px;
+// $mdc-shape-large-component-radius: 0px;
+
+
+/* Color */
+// Primary colors ($mdc-theme-primary) map to components and elements, and secondary colors ($mdc-theme-secondary) are used as accents on components. Replace these
 
 // $mdc-theme-primary: #6200ee;
 // $mdc-theme-secondary: #018786;
