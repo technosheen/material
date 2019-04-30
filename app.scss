@@ -38,9 +38,6 @@
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/typography/mdc-typography";
 
-// Apply mixins to theme individual components
-@import "my-mixins";
-
 // Import site-specific CSS files
 @import "my-layout";
 @import "my-components";
