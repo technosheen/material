@@ -379,6 +379,21 @@ body {
       margin-bottom: 96px;
     }
   }
+  
+  .drawer-content--instructions {
+    .mdc-typography--overline {
+      font-size: 0.9rem;
+    }
+    
+    .mdc-typography--body2 {
+      font-size: 1.2rem;
+      line-height: 1.75rem;
+    }
+  }
+  
+  .drawer-content--options {
+    display: none;
+  }
 }
 
 // Theme Summary Typography

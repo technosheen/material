@@ -52,7 +52,6 @@
           Build a Material Theme
         </h1>
         <h2 class="theme-name mdc-typography--headline5" placeholder="Theme name..."></h2>
-<!--         <a class="glitch-url mdc-typography--overline" href="https://glitch.com/~purple-tuba">glitch.com/~purple-tuba</a> -->
         <a class="glitch-url mdc-typography--overline" href="https://glitch.com/~<%= htmlWebpackPlugin.options.domain %>">glitch.com/~<%= htmlWebpackPlugin.options.domain %></a>
       </div>
       <hr class="mdc-list-divider theme-builder-drawer-divider">
@@ -95,17 +94,19 @@
           <a href="https://github.com/material-components/material-components-web">Material Components for the web</a>.
         </p>
 
-        <h6 class="mdc-typography--overline">Options</h6>
-        <div class="mdc-form-field">
-          <div class="mdc-switch rtl-switch">
-            <div class="mdc-switch__track"></div>
-            <div class="mdc-switch__thumb-underlay">
-              <div class="mdc-switch__thumb">
-                  <input type="checkbox" id="rtl-input" class="mdc-switch__native-control" role="switch">
+        <div class="drawer-content--options">
+          <h6 class="mdc-typography--overline">Options</h6>
+          <div class="mdc-form-field">
+            <div class="mdc-switch rtl-switch">
+              <div class="mdc-switch__track"></div>
+              <div class="mdc-switch__thumb-underlay">
+                <div class="mdc-switch__thumb">
+                    <input type="checkbox" id="rtl-input" class="mdc-switch__native-control" role="switch">
+                </div>
               </div>
             </div>
+            <label for="rtl-input">Enable Right-to-Left</label>
           </div>
-          <label for="rtl-input">Enable Right-to-Left</label>
         </div>
       </div>
 
