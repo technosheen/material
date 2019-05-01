@@ -1,6 +1,55 @@
 /* Build a Material Theme */
-// To begin customizing your theme, modify these variables. By default each theme starts off with our baseline values. We’ve added these values in the theme so you can easily swap them out.
+// To begin customizing your theme, modify these variables. By default each theme starts off with our baseline values. 
 
+// Crane Material Theme
+
+/*  Typography */
+
+// @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600');
+// $mdc-typography-font-family: unquote("Raleway, sans-serif");
+
+/* Shape */
+
+// $mdc-shape-small-component-radius: 20px;
+// $mdc-shape-medium-component-radius: 16px;
+// $mdc-shape-large-component-radius: 20px;
+
+/* Color */
+
+// $mdc-theme-primary: #5D1049;
+// $mdc-theme-secondary: #E30425;
+// $mdc-theme-background: #F4E2ED;
+// $mdc-theme-error: #FD9725;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Build a Material Theme */
+// To begin customizing your theme, modify these variables. By default each theme starts off with our baseline values. We’ve added these values in the theme so you can easily swap them out.
 
 /*  Typography */
 // To change your theme's typography, we recommend importing a font from Google Fonts and setting the global font-family https://fonts.google.com
@@ -47,22 +96,23 @@
 
 
 
+
 // Crane Material Theme
 
 /*  Typography */
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600');
-$mdc-typography-font-family: unquote("Raleway, sans-serif");
+// @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600');
+// $mdc-typography-font-family: unquote("Raleway, sans-serif");
 
 /* Shape */
 
-$mdc-shape-small-component-radius: 20px;
-$mdc-shape-medium-component-radius: 16px;
-$mdc-shape-large-component-radius: 20px;
+// $mdc-shape-small-component-radius: 20px;
+// $mdc-shape-medium-component-radius: 16px;
+// $mdc-shape-large-component-radius: 20px;
 
 /* Color */
 
-$mdc-theme-primary: #5D1049;
-$mdc-theme-secondary: #E30425;
-$mdc-theme-background: #F4E2ED;
-$mdc-theme-error: #FD9725;
+// $mdc-theme-primary: #5D1049;
+// $mdc-theme-secondary: #E30425;
+// $mdc-theme-background: #F4E2ED;
+// $mdc-theme-error: #FD9725;
