@@ -94,7 +94,6 @@ body {
 
 .glitch-url {
   @include mdc-theme-prop(color, $mdc-theme-primary);
-  margin-top: 0;
   font-size: 0.65rem;
 }
 
@@ -378,6 +377,14 @@ body {
     &.text-field-component-wrapper, &.chips-component-wrapper {
       margin-bottom: 96px;
     }
+  }
+  
+  .theme-name {
+    margin-bottom: 8px;
+  }
+  
+  .glitch-url {
+    font-size: 1rem;
   }
   
   .drawer-content--instructions {
