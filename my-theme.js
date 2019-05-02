@@ -1,4 +1,4 @@
 // Enter your theme name here!
-const themeName = 'Crane Material Theme';
+const themeName = '';
 
 export default themeName;
