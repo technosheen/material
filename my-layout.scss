@@ -40,6 +40,8 @@ body {
   }
   
   .mdc-tab {
+    font-family: Roboto, sans-serif;
+    
     .mdc-tab-indicator--active {
       @include mdc-tab-ink-color(#6200ee);
     }
@@ -295,7 +297,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background: rgba(mdc-theme-prop-value(surface), .9);
+  background: mdc-theme-prop-value(background);
 
   &:not(.mdc-top-app-bar--fixed-adjust) {
     padding: 2vh 0;
