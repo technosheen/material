@@ -30,6 +30,10 @@ body {
     color: rgba(0, 0, 0, .87);
   }
   
+  a {
+    font-family: Roboto, sans-serif;
+  }
+  
   h6 {
     color: rgba(0, 0, 0, .6);
     margin: 0;
@@ -103,6 +107,7 @@ body {
 
 .theme-name {
   margin-bottom: 0;
+  font-family: Roboto, sans-serif;
 
   &:focus {
     outline: 1px solid rgba(0, 0, 0, .12);
@@ -117,6 +122,7 @@ body {
 .glitch-url {
   color: #6200ee;
   font-size: 0.65rem;
+  font-family: Roboto, sans-serif;
 }
 
 // Theme Summary content
