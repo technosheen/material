@@ -41,6 +41,7 @@ body {
   
   .mdc-tab {
     font-family: Roboto, sans-serif;
+    @include mdc-tab-ink-color(#6200ee);
     
     .mdc-tab-indicator--active {
       @include mdc-tab-ink-color(#6200ee);
