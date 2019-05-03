@@ -368,12 +368,12 @@ body {
   a {
     display: flex;
     align-items: center;
-    color: if(mdc-theme-contrast-tone($mdc-theme-surface) == "dark",
+    color: if(mdc-theme-contrast-tone($mdc-theme-background) == "dark",
       rgba(0, 0, 0, 0.54),
       rgba(255, 255, 255, 0.54));
   
     &:hover, &:focus {
-    color: if(mdc-theme-contrast-tone($mdc-theme-surface) == "dark",
+    color: if(mdc-theme-contrast-tone($mdc-theme-background) == "dark",
       rgba(0, 0, 0, 0.87),
       rgba(255, 255, 255, 0.87));
       text-decoration: none;
