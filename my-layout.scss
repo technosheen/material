@@ -39,8 +39,16 @@ body {
     margin-block-end: 1.25em;
   }
   
+  .mdc-tab {
+    @include mdc-tab-ink-color(#6200ee);
+    
+    .mdc-tab-indicator {
+      @include mdc-tab-indicator-underline-color(#6200ee);
+    }
+  }
+  
   a {
-    @include mdc-theme-prop(color, $mdc-theme-primary);
+    color: #6200ee;
     text-decoration: none;
 
     &:hover, &:focus {
@@ -58,7 +66,17 @@ body {
     margin: 12px 0;
     
     .rtl-switch {
+      @include mdc-switch-toggled-off-color(white);
+      @include mdc-switch-toggled-off-track-color(black);
       margin-right: 16px;
+    }
+  }
+  
+  .section-header a {
+    color: rgba(0, 0, 0, 0.54);
+  
+    &:hover, &:focus {
+      color: rgba(0, 0, 0, 0.87);
     }
   }
 }
@@ -93,7 +111,7 @@ body {
 }
 
 .glitch-url {
-  @include mdc-theme-prop(color, $mdc-theme-primary);
+  color: #6200ee;
   font-size: 0.65rem;
 }
 
@@ -275,7 +293,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background: $mdc-theme-background; 
+  background: rgba(mdc-theme-prop-value(surface), .9);
 
   &:not(.mdc-top-app-bar--fixed-adjust) {
     padding: 2vh 0;
@@ -342,10 +360,14 @@ body {
   a {
     display: flex;
     align-items: center;
-    color: rgba(0, 0, 0, 0.54);
+    color: if(mdc-theme-contrast-tone($mdc-theme-surface) == "dark",
+      rgba(0, 0, 0, 0.54),
+      rgba(255, 255, 255, 0.54));
   
     &:hover, &:focus {
-      color: rgba(0, 0, 0, 0.87);
+    color: if(mdc-theme-contrast-tone($mdc-theme-surface) == "dark",
+      rgba(0, 0, 0, 0.87),
+      rgba(255, 255, 255, 0.87));
       text-decoration: none;
     }
   }
