@@ -40,7 +40,9 @@ body {
   }
   
   .mdc-tab {
-    @include mdc-tab-ink-color(#6200ee);
+    .mdc-tab-indicator--active {
+      @include mdc-tab-ink-color(#6200ee);
+    }
     
     .mdc-tab-indicator {
       @include mdc-tab-indicator-underline-color(#6200ee);
@@ -277,7 +279,7 @@ body {
   text-align: center;
   background: $material-color-grey-100;
   color: rgba(0, 0, 0, .87);
-  padding: 10px 0;
+  padding: 10px;
 }
 
 // Breakpoint <1310px

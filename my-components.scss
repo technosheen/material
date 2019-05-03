@@ -148,7 +148,7 @@
 .mdc-image-list {
   @include mdc-image-list-masonry-columns(2);
 
-  width: 400px;
+  max-width: 400px;
   max-height: 600px;
   margin: 0;
 }
