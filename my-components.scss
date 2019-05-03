@@ -131,11 +131,15 @@
 
 .component-wrapper > .mdc-list {
   border: 1px solid rgba(0,0,0,.1);
-  background: $mdc-theme-surface;
+  background: $mdc-theme-background;
 
   .mdc-list-item__graphic {
-    background-color: rgba(0, 0, 0, 0.12);
-    color: rgba(0, 0, 0, 0.68);
+    background-color: if(mdc-theme-contrast-tone($mdc-theme-background) == "dark",
+      rgba(0, 0, 0, 0.12),
+      rgba(255, 255, 255, 0.12));
+    color: if(mdc-theme-contrast-tone($mdc-theme-background) == "dark",
+      rgba(0, 0, 0, 0.68),
+      rgba(255, 255, 255, 0.68));
   }
 }
 
