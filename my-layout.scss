@@ -433,6 +433,93 @@ body {
   .drawer-content--options {
     display: none;
   }
+  
+    // Print adjustments
+  
+  .button-component-wrapper,
+  .fab-component-wrapper {
+    margin: 32px 0 44px;
+  }
+  
+  .top-bar-component-wrapper {
+    margin: 24px 0 52px;
+  }
+  
+  .switch-component-wrapper {
+    margin-left: -8px;
+    margin-top: 24px;
+  }
+  
+  .component-wrapper.checkbox-component-wrapper {
+    margin-left: -18px;
+  }
+  
+  .component-wrapper.chips-component-wrapper-1 {
+    margin: 12px 0 92px -8px;
+  }
+  
+  .select-component {
+    margin: 4px 20px 40px 20px;
+  }
+  
+  .column-2 {
+    transform: translate(-16px);
+  }
+  
+  .card-component-wrapper {
+    margin: 16px 0 38px;
+  }
+  
+  .component-wrapper.text-field-component-wrapper-1 {
+    margin: 22px 0 90px;
+  }
+  
+  .dialog-component-wrapper {
+    margin: 8px 0 52px;
+  }
+  
+  .linear-progress-section {
+    margin-top: 0;
+  }
+  
+  .tabs-section {
+    margin-top: -16px;
+  }
+  
+  .radio-row {
+    margin-top: -24px;
+    margin-bottom: -16px;
+  }
+  
+  .snackbar-section {
+    margin-top: -16px;
+  }
+  
+  .image-section {
+    margin-top: -4px;
+  }
+  
+  .switch-section {
+    margin-top: 0;
+  }
+  
+  .short-app-bar-section,
+  .menu-section {
+    margin-top: 0px;
+  }
+  
+  .switch-checkbox-row {
+    margin-bottom: 16px;
+  }
+  
+  .list-section {
+    margin-top: 8px;
+  }
+  
+  .dialog-component-section {
+    margin-bottom: 52px;
+    margin-top: -8px;
+  }
 }
 
 // Theme Summary Typography
