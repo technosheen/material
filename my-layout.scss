@@ -107,7 +107,6 @@ body {
 
 .theme-name {
   margin-bottom: 0;
-  font-family: Roboto, sans-serif;
 
   &:focus {
     outline: 1px solid rgba(0, 0, 0, .12);
@@ -366,6 +365,7 @@ body {
 .section-header {
   display: flex;
   height: 36px;
+  font-family: Roboto, sans-serif;
   
   a {
     display: flex;
