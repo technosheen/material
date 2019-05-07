@@ -522,8 +522,12 @@ body {
   }
   
   .chips-section {
-    margin: 16px 20px 24px 20px;
+    margin: 16px 20px -32px 20px;
   }
+  
+//   .section-header a {
+//   transform: translateY(-16px);
+//   }
 }
 
 // Theme Summary Typography
