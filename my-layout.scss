@@ -5,6 +5,14 @@ body {
   margin: 0;
 }
 
+.remix-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 200;
+  
+}
+
 // Theme Builder drawer content
 
 .theme-builder-drawer {
@@ -356,6 +364,15 @@ body {
   .column {
     overflow: hidden;
   }
+  
+  .remix-fab {
+  position: fixed;
+  bottom: 16px;
+  right: auto;
+  margin: 0;
+  z-index: 200;
+  
+}
   
    .mdc-dialog .mdc-dialog__surface {
     max-width: calc(100% - 100px);
