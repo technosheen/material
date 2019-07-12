@@ -303,6 +303,11 @@ body {
   .theme-builder-app-bar, .theme-builder-desc-banner {
     display: block;
   }
+  
+  .theme-builder-drawer {
+    //  No display by default until JS loads in to prevent jank 
+    display: none;
+  }
 }
 
 // Main content layout
