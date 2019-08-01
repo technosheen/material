@@ -17,7 +17,8 @@ import {
   MDCTabBar,
   MDCTextField,
   MDCTextFieldHelperText,
-  MDCTopAppBar
+  MDCTopAppBar,
+  MDCDataTable
 } from './components';
 
 // Import my theme variables
@@ -128,6 +129,11 @@ menuEl.addEventListener('MDCMenuSurface:opened', () => document.querySelector('.
 // Tabs
 const tabBarEl = mainEl.querySelector('.mdc-tab-bar');
 new MDCTabBar(tabBarEl);
+
+// Data Table
+const dataTable = document.querySelector('.mdc-data-table');
+new MDCDataTable(dataTable);
+
 
 //
 // Theme Builder drawer contents
