@@ -34,10 +34,6 @@ const mainEl = document.querySelector('.main-content');
 const buttonEls = Array.from(mainEl.querySelectorAll('.mdc-button'));
 buttonEls.forEach((el) => new MDCRipple(el));
 
-// Icon button
-const iconButtonEls = Array.from(mainEl.querySelectorAll('.mdc-icon-button:not(#icon-toggle-button'));
-iconButtonEls.forEach((el) => new MDCRipple(el));
-
 // Icon button toggle
 const iconToggleEl = mainEl.querySelector('#icon-toggle-button');
 const iconToggle = new MDCIconButtonToggle(iconToggleEl);
