@@ -129,8 +129,8 @@ const tabBarEl = mainEl.querySelector('.mdc-tab-bar');
 new MDCTabBar(tabBarEl);
 
 // Data Table
-const dataTable = document.querySelector('.mdc-data-table');
-new MDCDataTable(dataTable);
+const dataTableEl = document.querySelector('.mdc-data-table');
+new MDCDataTable(dataTableEl);
 
 
 //
